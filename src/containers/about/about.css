@@ -1,0 +1,2129 @@
+:root{
+  --font-prompt: 'Prompt', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-lato: 'Lato', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-mont: 'Montserrat', sans-serif;
+  --font-montSubrayada:  'Montserrat Subrayada', sans-serif;
+  
+  --dark-mode: #0f0f0f;
+  --dark-mode-bg:#202020;
+  --light-mode-bg:#F1F1F1;
+
+  --dark-mode-text:#dddddd;
+  --dark-mode-Titletext:#eeeeee;
+  --text-primary-clr:#5F5F5F;
+  --light-mode-text:rgb(20, 20, 20);
+
+  --primary-color:#4D5BFF;
+}
+ 
+
+.container_about{
+    min-height: 200vh;
+    height: auto; 
+    width: 100%; 
+
+    max-width: 100%;
+}
+
+
+
+
+
+/* .hero */
+.container_about .hero{
+  width: 100%;
+  max-width: 100%;
+  position: relative; 
+  height: 715px; 
+
+  display: flex;
+  justify-content: start; 
+ 
+}
+
+/* .hero image slider */
+.container_about .hero .swiper{
+  height: 100%;
+  width: 100%;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+  
+.container_about .hero .swiper .swiper-pagination{
+  right: 3rem;
+}
+
+.container_about .hero .swiper .swiper-pagination-bullet{
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  width: 10px;
+  height: 10px;
+
+  opacity: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_about .hero .swiper .swiper-pagination-bullet-active::before{
+  content: "";
+  position: absolute;
+  
+  height: 80%;
+  width: 80%;
+  background-color: #202020;
+
+  border-radius: 50%;
+}
+
+.container_about .imageSlide{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white; 
+}
+
+.container_about .imageSlide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .hero-content */
+.container_about .hero .hero-content{
+  width: 664px;
+  max-width: 100%;
+  height: 480px;
+  position: absolute;
+  z-index: 1; 
+  left: 0;
+  top: 5.938rem; 
+
+  background: rgba(11, 11, 11, 0.63);
+  backdrop-filter: blur(2px); 
+
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+  
+  color: white;
+
+  padding: 2rem 0rem 4rem 9rem;
+}
+
+.container_about .hero h2{
+  font-size: 4.063rem;
+  font-family: var(--font-lato);
+  font-weight: 700;
+
+  line-height: 68px;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+.container_about .hero p{
+  font-size: 1.063rem;
+  font-family:  var(--font-poppins);
+  font-weight: 300; 
+  
+  width: 517px;
+  line-height: 25.5px; 
+}
+
+.container_about .hero button{
+  width: 152.22px;
+  height: 36.95px;
+  position: relative; 
+
+  background-color: white;
+  color: white;
+
+  margin-top: 1rem;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.container_about .hero button span{
+  z-index: 1;
+
+  font-weight: 400;
+  font-size: 0.938rem;
+  font-family: var(--font-prompt);
+
+}
+
+.container_about .hero button::before{
+  content: "";
+  width: 98%;
+  height: 94%;
+  background-color: #0B0B0B;
+  position: absolute;
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+/* visi_misi */
+.visi_misi{
+  width: 100%;
+  max-width: 1800px;
+  height: auto;
+  position: relative;
+  
+  margin: 2rem auto;
+
+  padding: 2rem 10.875rem;
+}
+
+.visi_misi .title{
+  width: auto;
+  position: relative;
+}
+
+.visi_misi .title h2{
+  font-family: var(--font-lato);
+  font-size: 3.125rem;
+  font-weight: 700;
+
+  line-height: 60px;
+}
+
+.visi_misi .about-visi{
+  font-family: var(--font-mont);
+  position: relative;
+
+  width: 860px;  
+  height: auto;
+
+  margin: 4.5rem 0;
+  overflow: hidden;
+}
+
+
+.visi_misi .about-visi .opacityAnimation{
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  height: 95%; 
+  background: var(--light-mode-bg);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--light-mode-bg) 17%);
+}
+
+.about-visi h4{
+  font-size: 3.125rem;
+  font-weight: 600;
+  line-height: 60.95px;  
+  width: 100%;
+
+  margin:  0;
+}
+
+/* costumers service */
+.costumers_service{
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.costumers_service .information,
+.costumers_service .service_country{
+  width: 45%;
+  min-width: 500px;
+  height: 614px;
+  position: relative;  
+}
+
+.information h5{
+  color: var(--primary-color);
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 1.563rem;
+
+  margin: 0;
+  line-height: 37.5px; 
+}
+
+  
+.text_information{ 
+  position: relative;
+  gap: 22px;
+}
+
+.service_country p,
+.information p{
+  font-family: var(--font-prompt);
+  color: var(--text-primary-clr);
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 21.04px;
+  width: 542px;
+}
+
+.service_country h3{
+  font-family: var(--font-lato);
+  font-weight: 700;
+  font-size: 2.063rem; 
+}
+
+/* background num country */
+.num_country{
+  width: 100%;
+  height: 350px;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.num_country h1{
+  font-weight: 700;
+  font-family: var(--font-lato);
+  font-size: 26.875rem;
+  user-select: none;
+
+  background-image: url('../../images/bgCountryImage.png');
+  background-repeat: no-repeat;   
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* world map */
+.world_map{
+  width: 100%;
+  height: 206px;
+  position: relative;
+
+  margin-top: 7rem;
+}
+
+.world_map img{
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* ADVANTAGES */
+.advantages{
+  width: 100%;
+  height: 826px;
+  position: relative;
+
+  margin: 8rem 0; 
+}
+
+/* advantages content */
+.advantages-content{
+  width: 100%;
+  height: 100%;
+  position: relative; 
+  z-index: 2;
+
+  color: white;
+
+  padding: 3rem 0;
+}
+
+.advantages-content_title{
+  width: 100%;
+  height: auto; 
+
+  text-align: center; 
+}
+
+.advantages-content_title h2{
+  font-family: var(--font-lato);
+  font-weight: 600;
+  font-size: 2.5rem;
+  
+  margin: 0;
+}
+
+.advantages-content_title h3{
+  font-family: var(--font-prompt);
+  font-size: 1.438rem;
+  font-weight: 500;
+  color: #B2B2B2;
+  
+  margin: 0;
+  padding-top: 1rem;
+}
+
+/* advantages container */
+.advantages-container{
+  width: 100%;
+  max-width: 1700px;
+  height: auto;
+  position: relative;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7.5rem;
+  margin:  7rem auto  0;
+} 
+
+.advantages-container .advantage{
+  width: 401px;
+  height: auto;
+
+  flex-direction: column;  
+}
+
+.advantage .icon{
+  align-items: start;
+
+  width: 100%;
+  height: 89px;
+  position: relative; 
+}
+
+.advantage .icon img{
+  height: 71px;
+  width: auto;
+  object-fit: contain;
+}
+
+.advantage h4{
+  font-size: 1.375rem;
+  font-weight: 700;
+  font-family: var(--font-mont);
+  line-height: 26.82px; 
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.advantage p{
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: var(--font-prompt);
+  line-height: 27.22px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+
+/* bg advantages */
+.advantages .bgAdvantages{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  left: 0;
+  top: 0;
+ 
+}
+
+.bgAdvantages img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* background vector */
+.container-vector,
+.bgAdvantages .vector:not(.vector.bg2){
+  position: absolute;
+  top: -40px;
+   
+  z-index: -10;
+  height: 911px;
+}
+
+.bgAdvantages .vector.bg1{
+  left: 0;
+  width: 446px;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+  background-color: var(--primary-color);
+}
+
+.container-vector{
+  width: 260px;
+  right: 0; 
+  overflow: hidden;
+}
+
+.bgAdvantages .vector.bg2{ 
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+  background-color: var(--primary-color);
+}
+
+
+
+
+
+
+/* AWARDS */ 
+.container_about .awards{
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  position: relative; 
+
+  padding: 0 10.938rem;
+  margin: 2rem auto;
+  
+}
+
+.awards .award-title{
+  width: 100%;
+  height: auto;
+
+  font-family: var(--font-mont);
+  font-weight: 500;
+  font-size: 2.813rem;
+
+  justify-content: start;
+
+  margin: 0 0 2rem;
+ 
+}
+
+/* awards-container */
+.awards-container{
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+ 
+}
+
+.awards-container .num-awards,
+.awards-container .web-awards{
+  position: relative;
+  width: 50%;
+  max-width: 565px;
+  height: auto; 
+}
+
+/* num awards */
+.category-num-awards{
+  margin-top: 9.8rem;
+}
+.num-awards h4{
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 38.73px;
+  letter-spacing: 12.5%;
+
+  margin: 0;
+}
+
+.num-awards p:not(.num-award p){
+  font-weight: 400;
+  font-family: var(--font-prompt);
+  font-size: 1.25rem;
+  line-height: 30.24px;
+  letter-spacing: 1%;
+
+  color: var(--text-primary-clr); 
+}
+
+.num-awards .num-award{
+  flex-direction: column;
+
+  width: 175px;
+  height: 213px;
+
+  padding: 0 1rem;
+  margin: 0 .4rem;
+
+  box-shadow: 0px 3px 13px -3px #0000000D;
+  background: #FFFFFF;
+}
+
+.num-award h5{
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 5rem;
+  color: #C4DFDF;
+  line-height: 96.82px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.num-award p{
+  font-family: var(--font-lato);
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: 100%;
+  text-align: center;
+
+  height: 50px;
+}
+
+/* website awards */
+.web-award{
+  width: 553px;
+  height: 169px;
+  position: relative;
+
+  margin: 1.9rem 0;
+  flex-wrap: wrap; 
+}
+
+.web-award .image{
+  width:300px;
+  position: relative; 
+}
+
+.web-award .image img{
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+ 
+}
+
+.web-award .about-award{
+  width: 250px;
+  position: relative;
+  height: 100%; 
+  padding-left: 1.2rem;
+  flex-direction: column;  
+ 
+}
+
+.web-award .title-award{ 
+  width: 100%;
+  gap: .5rem;
+
+  align-items: start;
+}
+
+.about-award p,
+.about-award h4{
+  margin: 0 .1rem; 
+  height: 23px;
+}
+
+.about-award h4{
+  font-family: var(--font-mont);
+  font-weight: 500;
+  font-size: 0.875rem; 
+  color: var(--primary-color);
+
+  background-color: #CFD2FF;
+  width: 112px;
+  border-radius: 6px;
+}
+
+.about-award p{
+  font-weight: 500;
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  color: var(--text-primary-clr);
+  letter-spacing: .5px;  
+}
+
+.about-award .overviews{
+  width: 100%;
+  position: relative;
+  margin: 0; 
+}
+
+.about-award h5{
+  font-size: 0.938rem;
+  font-family: var(--font-inter);
+  line-height: 18.15px;
+  letter-spacing: 1.1px;
+
+  width: 230px; 
+}
+
+
+
+
+
+
+/* Testimonials */ 
+.testimonials{
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  margin-top: 4rem;
+}
+
+.testimoni-title{
+  width: 100%;
+  position: relative;
+  gap: .7rem;
+}
+
+.testimoni-title h2{
+  font-weight: 500;
+  font-family: var(--font-mont);
+  font-size: 2.5rem;
+}
+
+.testimoni-title img{
+  height: 25px;
+  width: auto;
+  position: relative;
+
+}
+
+/* testimonials slider */
+.container_about .testimoni-container{
+  width: 100%;
+  height: auto; 
+  position: relative; 
+}
+  
+
+/* testimoni */
+.testimoni-container .swiper-slide{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  transition: .3s ease-in-out ;
+}
+
+.testimoni-container .swiper-slide-prev{
+  justify-content: end;  
+  transition: .5s ease-in-out ;
+}
+
+.testimoni-container .swiper-slide-next{
+  justify-content: start;
+  transition: .5s ease-in-out ;
+}
+
+.testimoni-container .swiper-slide-active{
+  transform: scale(1.2);
+
+}
+ 
+.swiper-slide .testimoni{ 
+  position: relative;
+  width: 311px;
+  height: 247px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 6px 0px #00000017;
+  transform: scale(.8); 
+}
+
+
+.testimoni .profile{
+  position: relative;
+  top: -20%;
+  border-radius: 50%; 
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 6px 0px #00000017;
+ 
+  margin:0 auto;
+
+  width: 95px;
+  height: 95px;
+}
+
+.testimoni .profile img{
+  height: 88px;
+  width: 88px;
+  border-radius: 50%;
+
+  object-fit: contain;
+  position: relative;
+}
+
+.testimoni .name{
+  margin: -30px 0 0 ;
+  width: 100%;
+}
+
+.testimoni h3{
+  margin:  0;
+  text-align: center;
+  
+  font-weight: 500;
+  font-family: var(--font-mont);
+  font-size: 1.25rem; 
+}
+
+.testimoni .words{
+  width: 100%;
+  margin-top: 1.7rem;
+}
+
+.testimoni p{
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  width: 257px;
+  margin: 0 auto;
+}
+
+.container_about .slide-limits{
+  height: 100%;
+  width: 9%;
+  background-color: var(--light-mode-bg);
+
+  position: absolute;
+  top: 0;
+  right: 0; 
+  z-index: 8;
+}
+
+.container_about .slide-limits.left{
+  left: 0;
+}
+
+.container_about .slide-limits.right{
+  right: 0;
+}
+/* button slider */
+.container_about .swiper-button-prev,
+.container_about .swiper-button-next{ 
+  transition:all .3s ease-in-out;
+   
+  width: 76px;
+  height: 76px;
+  z-index: 9;
+} 
+
+.container_about .swiper-button-prev{
+  left: 4rem;
+}
+.container_about .swiper-button-next{
+  right: 4rem;
+}
+
+.container_about .swiper-button-prev::after,  
+.container_about .swiper-button-next::after{  
+  display: none;
+}
+
+.container_about .swiper-button-prev::before,
+.container_about .swiper-button-next::before{
+    content: "";
+    transition: .3s ease-in-out;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.container_about .swiper-button-prev::before{ 
+  background-image: url(../../icons/leftBtnTestimoni.svg); 
+}
+.container_about .swiper-button-next::before{ 
+  background-image: url(../../icons/rightBtnTestimoni.svg);
+}
+
+
+ 
+/* dark mode container content */
+body.dark .testimoni .profile,
+body.dark .swiper-slide .testimoni,
+body.dark .num-awards .num-award{
+  background-color: rgb(22, 22, 22);
+}
+
+body.dark .visi_misi .about-visi .opacityAnimation{ 
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--dark-mode) 17%);
+}
+body.dark .container_about .slide-limits{
+  background-color: var(--dark-mode);
+}
+
+
+
+
+
+
+/* responsive */
+@media screen and (min-width:2000px){
+  .container_about .hero{
+    height: 50vw;
+    max-height: 1000px;
+  }
+}
+
+@media screen and (max-width:1550px){
+  /* advantages container */
+  .advantages-container{
+    gap: 5rem;
+  }
+
+  .advantages-container .advantage{
+    width: 360px;
+  }
+
+  .advantage h4{
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+  }
+
+  .advantage p{
+    font-size: 1rem;
+  }
+
+  /* awards */
+  .container_about .awards{
+    padding: 0 7.85rem;
+  }
+}
+
+@media screen and (max-width:1400px) {
+    /* .hero */
+    .container_about .hero{ 
+      height: 620px; 
+    }
+
+    /* .hero-content */ 
+    .container_about .hero .hero-content{ 
+      height: 420px; 
+      padding: 2rem 0rem 4rem 5rem;
+    }
+
+    .container_about .hero h2{
+      font-size: 3.4rem;
+      line-height: 50px;
+    }
+
+    .container_about .hero p{
+      font-size: 1rem;
+    }
+
+    /* visi_misi */
+    .visi_misi{ 
+      margin-top: 8rem;
+      padding: 2rem 5rem;
+    }
+
+    .visi_misi h2{
+      margin: 0;
+    }
+
+    .visi_misi .about-visi{ 
+      width: 75%; 
+    }
+
+    .about-visi h4{
+      font-size: 2.8rem;
+    }
+
+    /* costumers_service */
+
+    .service_country p,
+    .information p{ 
+      font-size: 1.1rem;
+      width: 100%;
+    }
+ 
+    .service_country h3{ 
+      font-size: 1.8rem;
+      margin: 1rem 0;
+    }
+
+    /* bg country */
+    .num_country{
+      height: 300px;
+    }
+    .num_country h1{ 
+      font-size: 24rem;
+    }
+
+    /* world map */
+    .world_map{ 
+      height: 180px; 
+      margin-top: 0rem;
+    }
+
+    /* advantages */
+    .advantages{
+      height: auto;
+    }
+    
+    .advantages .bgAdvantages{
+      height: 740px;
+    }
+
+    .advantages-container{ 
+       margin: 5rem auto;
+       gap: 4rem 2rem;
+    }
+ 
+    .advantages-content_title h2{
+      font-size: 2.2rem;
+    }
+
+    .advantages-content_title h3{
+      font-size: 1.2rem;
+    }
+
+    .advantage .icon{
+      height: 83px;
+    }
+
+    .advantage .icon img{
+      height: 80%;
+    }
+
+    .advantage h4{ 
+      margin-bottom: .1rem;
+    }
+  
+    .advantage p{
+      font-size: .9rem;
+    }
+
+
+    .container-vector,
+    .bgAdvantages .vector:not(.vector.bg2){ 
+      top: -24px;
+      height: 790px;
+    }
+
+    /* awards */
+    .container_about .awards{
+      padding: 0 5rem;
+    }
+    
+
+    /* testimonials */
+
+    /* button slider */
+    .container_about .swiper-button-prev,
+    .container_about .swiper-button-next{  
+      width: 55px;
+      height: 55px;
+    } 
+}
+
+@media screen and (max-width:1320px){  
+
+  .num-awards p:not(.num-award p){
+    font-size: 1.5vw; 
+  }
+
+  .awards-container .num-awards{ 
+    width: 45%;
+  }
+
+  .num-awards .category-num-awards{
+    margin-top: 5rem;
+    justify-content: space-between;
+  }
+
+  .num-awards .category-num-awards div{ 
+    width: 150px;
+    height: 190px;
+  }
+
+  .category-num-awards p{
+    font-size: 1.5vw;
+  }
+
+  /* web award */
+  .web-awards .web-award{
+    width: auto;
+  }
+
+  .web-awards .web-award .image{ 
+    width: 250px;
+  }
+
+  /* testimonials */
+  .swiper-slide .testimoni{
+    width: 270px;
+  }
+
+  .testimoni p{
+    width: 100%;
+    padding: 0 .8rem;
+    font-size: 1.3vw;
+  }
+
+}
+
+
+@media screen and (max-width:1200px){
+    /* visi_misi */
+    .visi_misi{ 
+      margin-top: 8rem;
+      padding: 0 3rem;
+    }
+
+   .visi_misi .title h2{
+      font-size: 2.4rem;
+    }
+
+    .visi_misi .about-visi{
+      margin: 2.9rem 0;
+    }
+  
+    .about-visi h4{
+      font-size: 2.5rem;
+    }
+
+    /* costumers service */
+    .costumers_service .information,
+    .costumers_service .service_country{
+      width: 48%;
+      min-width: 300px;
+      height: auto;  
+    }
+
+    .service_country p,
+    .information p{ 
+      font-size: 1rem; 
+    }
+
+    .service_country h3{ 
+      font-size: 1.65rem; 
+    }
+
+    /* background num country */
+    .num_country h1{
+      font-size: 22rem;
+    } 
+
+    .world_map {
+      margin-top: 4rem;
+    } 
+
+    /* advantages */ 
+    .advantages-content_title h2{
+      font-size: 3vw;
+    }
+
+    .advantages-content_title h3{
+      font-size: 1.6vw;
+    }
+
+    .advantages-container .advantage{ 
+      width: 290px;
+    }
+
+    .advantage .icon{
+      height: 60px;
+    }
+
+    .advantage h4{
+      font-size: 1.7vw;
+    }
+
+    .advantage p{
+      font-size: 1.2vw;
+    }
+
+    .bgAdvantages .vector.bg1{ 
+      width: 350px; 
+    }
+    
+    .container-vector{
+      width: 200px; 
+    }
+
+    .bgAdvantages .vector.bg2{ 
+      clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* awards */
+    .container_about .awards{
+      margin: 18rem 0 2rem; 
+    }
+ 
+    .container_about .awards{
+      padding: 0 3rem; 
+    }
+
+    /* testimonials */
+    .testimoni-title h2{
+      font-size: 3vw;
+    }
+
+    .testimoni-title img{
+      height: 20px;
+    }
+
+    .container_about .swiper-button-prev{
+      left: 2.5rem;
+    }
+
+    .container_about .swiper-button-next{
+      right: 2.5rem;
+    } 
+
+
+}
+
+@media screen and (max-width:1100px){
+   /* .hero */
+   .container_about .hero{
+    height: 520px;
+  }
+
+
+
+  /* advantages */
+  .advantages .bgAdvantages{ 
+    height:620px;
+  }
+
+  
+   /* advantages */
+     .container-vector,
+     .bgAdvantages .vector:not(.vector.bg2){
+      height: 108%;
+     }
+
+
+
+
+  /* awards */ 
+  .container_about .awards{
+    margin: 10rem 0 2rem; 
+  }
+
+  .awards-container .num-awards,
+  .awards-container .web-awards{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* num award */
+  .awards-container .num-awards{ 
+    display: flex;  
+  }
+
+  .award-description{
+    min-width: 400px;
+    max-width: 50%; 
+  }
+
+  .num-awards div{
+    width: 90%; 
+  }
+
+
+  .num-awards .category-num-awards{ 
+    margin: 0;
+    gap: 4rem 0rem;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .num-awards .category-num-awards .num-award{
+    height: 170px; 
+    width: 140px; 
+    min-width: 10px; 
+  }
+
+  .category-num-awards .num-award h5{
+    font-size: 4rem; 
+  }
+
+  .category-num-awards .num-award p{
+    margin: 0;
+  }
+
+  /* web award  */
+  .awards-container .web-awards{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+ 
+  }
+
+  .web-awards .web-award{   
+    align-items: center;
+    flex-direction: column;
+    height: 300px; 
+    max-width: 300px;
+ 
+  }
+
+  .web-award .about-award{
+    height: auto;
+    margin-top: 1rem; 
+    padding: 0;
+  }
+
+  .web-award .title-award{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .about-award h5{
+    letter-spacing: .7px;
+    font-size: 1.2vw;
+  }
+
+  /* testimonials */ 
+  
+  .container_about .swiper-button-prev{
+    left: 2%;
+  }
+
+  .container_about .swiper-button-next{
+    right: 2%;
+  }
+}
+
+@media screen and (max-width:1000px){
+    /* .hero */
+    .container_about .hero{
+      height: 490px;
+    }
+    /* .hero-content */
+    .container_about .hero .hero-content{
+      width: 50%;
+      max-width: 100%;
+      height: auto;   
+      gap: 1rem;  
+      padding: 2rem 0rem 4rem 4rem;
+    }
+
+    .container_about .hero h2{
+      font-size: 2.5rem;
+    }
+
+    .container_about .hero p{
+      font-size: .9rem;  
+      width: 95%; 
+    }
+
+    .container_about .hero button{
+      width: 122px;
+      height: 32px;  
+    }
+
+    .container_about .hero button span{
+      font-size: .8em;
+    }
+
+     /* visi_misi */ 
+     .visi_misi .about-visi{
+      width: 100%; 
+     }
+
+     .costumers_service h5{
+      font-size: 1.3rem;
+     }
+
+      .about-visi h4{
+      font-size: 1.9rem;
+      line-height: 1.3;
+
+      width: 700px;
+      max-width: 100%;
+     }
+
+     .num_country h1{
+      font-size: 35vw;
+     }
+
+
+
+
+     /* awards */   
+     .num-awards p:not(.num-award p){ 
+      line-height: 1.8;
+     }
+
+     .num-awards .award-description{  
+      min-width: 0;
+     }
+
+    .num-awards .category-num-awards .num-award{ 
+      width: 130px;  
+    }
+
+     /* testimonials */  
+     .testimoni-container .swiper-slide-active{
+      transform: scale(1);
+      justify-content: end;
+     }
+
+     .container_about .swiper-button-prev, 
+     .container_about .swiper-button-next{
+      width: 45px;
+      height: 45px;
+     }
+
+     .testimoni p{
+      font-size: 1.6vw;
+     }
+}
+
+@media screen and (max-width:950px){
+  /* advantages */
+  .advantages .bgAdvantages{ 
+    height:820px;
+  }
+
+  .advantages-container .advantage{ 
+    width: 45%;
+  } 
+     /* advantages */
+    .advantages-content_title h2{
+      font-size: 3.3vw;
+    }
+
+    .advantages-content_title h3{
+      font-size: 2vw;
+    }
+    .advantage h4{
+      font-size: 2.1vw;
+      margin-bottom: .4rem;
+    }
+    .advantage p{
+      font-size: 1.8vw;
+    }
+}
+
+@media screen and (max-width:900px){
+  /* .hero */
+    .container_about .hero{
+    height: 430px;
+  }
+
+   /* .hero-content */
+   .container_about .hero .hero-content{ 
+    height: auto;    
+    padding: 2rem 0rem 2rem 4rem; 
+  }
+
+  .container_about .hero p{
+    font-size: .83rem;  
+    line-height: 1.5;
+  }
+
+
+  
+     /* awards */  
+     .awards-container .num-awards{
+      flex-direction: column;
+      gap: 2rem;
+     }
+
+     .num-awards .award-description,
+     .num-awards .category-num-awards{
+      width: 100%;
+      max-width: 100%;
+     }
+
+     .num-awards p:not(.num-award p){
+      width: 70%; 
+      line-height: 1.4;
+      font-size: 1.7vw;
+     }
+
+     .num-awards .category-num-awards{
+      justify-content: start;
+      gap: 4rem;
+     }
+
+     /* web awards */
+     .awards .award-title{
+      font-size: 2.2rem;
+     }
+     .web-awards .web-award{ 
+      width: 230px;
+      height: auto;  
+     }
+
+     .web-awards .web-award .image{
+      width: 100%;  
+     }
+
+     .web-award .about-award{
+      width: 100%;
+     }
+
+     .num-awards h4{
+      font-size: 1.5rem;
+     }
+
+     .web-award .about-award p{
+      font-size: .75rem;
+     }
+
+     .web-award .about-award h5{
+      margin: 1rem 0 0;
+      text-align: center; 
+      letter-spacing: .6px;
+     }
+
+     .title-award .title{
+      font-size: .7rem;
+      width: 80px;
+      height: 19px;
+      border-radius: 3px;
+     }
+ 
+     /* testimonials */
+     .testimoni-container .swiper{ 
+      height: auto;
+
+      padding: 4rem 0;
+     }
+}
+
+@media screen and (max-width:800px){
+  /* .hero */
+  .container_about .hero{
+    height: 50vw;
+  }
+
+    /* .hero-content */
+    .container_about .hero .hero-content{ 
+      height: 280px;   
+      gap: .5rem;   
+      top: 80px;
+    }
+
+    .container_about .hero h2{
+      font-size: 2rem;
+    }
+
+    .container_about .hero p{
+      font-size: .73rem; 
+      line-height: 1.5;
+    }
+
+    .container_about .hero button{
+      width: 102.22px;
+      height: 29px;  
+    }
+
+    .container_about .hero button span{
+      font-size: .7em;
+    }
+
+
+    /* visi misi */ 
+    .visi_misi .title h2{
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+     .about-visi h4{
+      font-size: 1.8rem;
+      width: 80%;
+      min-width: 500px;  
+    }   
+
+    .service_country p,
+    .information p{
+      font-size: 1.75vw;
+      line-height: normal;
+    }
+
+    .service_country h3{
+      font-size: 2.5vw;
+    }
+
+    /* advantages */
+    .advantages-container{
+      gap: 2rem 1rem; 
+      margin: 0;
+
+      padding-top: 3rem;
+    }
+
+    .advantage h4{
+      margin-bottom: 0;
+      margin-top: .5rem;
+      line-height: 1;
+    }
+    /* Bg advantages*/
+    .advantages{ 
+      margin: 6rem 0;
+    }
+    .advantages .bgAdvantages{
+      height: 640px;
+    }
+
+    .bgAdvantages .vector.bg1{
+      width: 30%;
+    }
+    .container-vector{
+      width: 19%;
+    }
+
+    /* awards */
+    .awards .category-num-awards {
+      justify-content: space-between;
+      gap: 2rem 0;
+    }
+
+    .num-awards .category-num-awards .num-award{
+      height: 140px;
+    }
+
+    .web-award .about-award h5{
+      font-size: 1.6vw;
+     }
+
+     /* testimonials */
+     .testimoni .profile{
+      width: 80px;
+      height: 80px;
+     }
+
+      
+      .testimoni-title img{
+        height: 18px;
+      }
+
+     .testimoni .profile img{
+      height: 90%;
+      width: 90%;
+     }
+     .swiper-slide .testimoni{
+      height: 220px;
+     }
+     .testimoni p{
+      font-size: 1.9vw;
+     }
+
+}
+
+@media screen and (max-width:700px){
+  /* .hero */
+  .container_about .hero .swiper .swiper-pagination-bullet{
+    height: 9px;
+    width: 8px;
+  }
+
+  /* .hero-content */
+  .container_about .hero .hero-content{ 
+    height: auto;    
+  }
+
+  .container_about .hero p{
+    font-size: 1.4vw;
+  }
+
+  .container_about .hero button{
+    margin-top: 0; 
+    width: 80px;  
+    height: 20px;
+  }
+
+  .container_about .hero button::before{
+    height: 80%;
+  }
+
+  .container_about .hero button span{
+    font-size: 1.4vw; 
+  }
+
+  /* visi misi */
+  .visi_misi{
+    padding: 0 4rem;
+  }
+
+  .visi_misi .costumers_service,
+  .visi_misi .about-visi{
+    width: 100%;     
+  }
+
+  .costumers_service .service_country,
+  .costumers_service .information{
+    width: 100%;
+  } 
+ 
+
+   .about-visi h4{
+    width: 500px;
+    font-size: 1.5rem;
+    min-width: 0px;   
+
+  }
+ 
+
+  .num_country h1{
+    font-size: 50vi;  
+  }
+
+  .world_map{
+    height: 130px;
+  }
+
+  /* advantages */
+
+  .bgAdvantages .vector.bg1,
+  .bgAdvantages .vector.bg2{
+    height: 105%;
+    top: -15px;
+  }
+  /* awards */
+
+  .award-description h4{
+    text-align: center;
+  }
+
+  .num-awards  p:not(.num-award p){
+    font-size: 2.2vw;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* testimonials */ 
+  .swiper-slide .testimoni{
+    width: 240px;
+    height: 190px;
+  }
+  .testimoni p{
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width:650px){
+    /* .hero-content */
+    .container_about .hero .hero-content{ 
+      top: 65px;
+
+      padding: 1rem 0 1rem 2rem ;
+    }
+
+    /* awards */
+    .category-num-awards .num-award p{
+      font-size: .8rem;
+    }
+
+    .web-award .about-award h5{
+      font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:600px){ 
+    /* visi misi */ 
+
+    .service_country p,
+    .information p{
+      font-size: 2.2vw;
+    }
+
+    .service_country h3{
+      font-size: 3vw;
+    }
+
+    /* advantages */
+    .advantages-content{
+      padding: 2rem 0;
+    }
+
+    .advantages .bgAdvantages{
+      height: 550px;
+    }
+    
+    .advantages-content_title h2{
+      font-size: 4.1vw;
+    }
+    
+    .advantages-content_title h3{ 
+      padding-top: .3rem;
+    }
+
+    .advantages-container{
+      gap: 2rem 0;
+    }
+
+    .advantage .icon{
+      height: 50px;
+    }
+
+    .advantage h4{
+      font-size: 2.75vw;
+    }
+
+    /* awards */
+    .awards .award-title{
+      font-size: 2rem;
+    }
+    .awards-container .web-awards{
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .num-awards  p:not(.num-award p){
+      font-size: 2.4vw;
+    }
+
+    .num-awards .category-num-awards .num-award{
+      margin: 0;
+      width: 120px;
+    }
+
+    .category-num-awards .num-award h5{
+      line-height: normal;
+      font-size: 3.5rem;
+      margin-bottom: .6rem;
+    }
+
+    .category-num-awards .num-award p{ 
+      height: 30px;  
+    }
+ 
+
+    .web-awards .web-award{
+      width: 80%;
+      max-width: 100%;
+
+      text-align: center;
+    }
+
+    .web-awards .web-award h5{
+      text-align: center;
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    /* testimonials */
+    .container_about .swiper-button-prev, 
+    .container_about .swiper-button-next{
+      width: 38px;
+      height: 38px;
+    }
+
+    .testimoni-title h2{
+      font-size: 1.3rem;
+    }
+
+    .testimoni-title img{
+      height: 15px;
+    }
+
+}
+
+@media screen and (max-width:550px){
+  /* .hero */ 
+
+  .container_about .hero .swiper{
+    height: 100%; 
+  }
+     /* .hero-content */
+  .container_about .hero .hero-content{ 
+    height: auto; 
+    width: 80%;   
+
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,-50%);
+
+    text-align: center;
+    padding: 1rem;
+    background: #0B0B0BE8;
+
+    gap: .8rem;
+  }
+
+  .container_about .hero h2{  
+    width: 100%; 
+    font-size: 1.85rem;  
+    
+    display: flex;
+    justify-content: center;
+  }
+
+  .container_about .hero p{
+    font-size: .65rem;
+    margin: 0 auto; 
+  }
+
+  .container_about .hero button{
+    margin: 0 auto; 
+  }
+
+  .container_about .hero .button{
+    width: 100%;
+  }
+
+  .container_about .hero button::before{
+    width: 95%;
+  }
+
+  /* visi misi */
+  .visi_misi{
+    margin-top: 12rem;
+    padding: 0 2rem;
+  }
+
+  .visi_misi .information,
+  .visi_misi .service_country{
+    min-width: 0;
+  }
+
+  .visi_misi .title h2{
+    font-size: 1.6rem; 
+  }
+
+  .about-visi h4{
+    text-align: center;
+    width: 100%; 
+    font-size: 1.3rem;
+  }
+
+  .num_country{
+    height: auto;
+  }
+  .num_country h1{ 
+    background-size: contain;
+    margin: 0;
+  }
+
+  .world_map {
+    height: auto; 
+    margin: 2rem 0;
+  }
+
+  .world_map img{
+    max-width: 50%;
+    height: auto;
+  } 
+
+
+
+  /* advantages */
+  .advantage h4{
+    font-size: .9rem;
+  }
+
+  .advantage p{
+    font-size: .7rem;
+    line-height: normal;
+    margin-top: .3rem;
+  }
+
+
+
+
+
+  /* awards */
+  .category-num-awards .num-award p{  
+    font-size: .7rem;
+  }
+
+ 
+
+
+   /* testimonials */
+   .swiper-slide .testimoni{
+    width: 220px;
+   }
+
+}
+
+@media screen and (max-width:500px){
+  /* visi misi */
+  .service_country p, .information p{
+    font-size: 2.45vw;
+  }
+  /* AWARDS */
+  .container_about .awards{
+    padding: 0 2rem;
+  }
+  .num-awards .category-num-awards .num-award{
+    width: 110px;
+  }
+
+  .web-awards .web-award{
+    width: 95%;
+    min-width: 200px; 
+  }
+
+  /* testimonials */
+  .testimoni-container .swiper-slide-active{
+    justify-content: center;
+  }
+
+  .swiper-slide .testimoni{
+    width: 300px;
+    max-width: 90%;
+  }
+
+  .testimoni p{
+    font-size: .8rem;
+  }
+}
+
+@media screen and (max-width:470px){
+  /* .hero content */ 
+  .container_about .hero-content h2{
+    font-size: 1.5rem;
+    line-height: 1.3; 
+  }
+
+  .container_about .hero-content p{
+    font-size: .62rem;
+  } 
+
+  /* advantages */
+  .container-vector, .bgAdvantages .vector:not(.vector.bg2){
+    height: 106%;
+    top: -15px;
+  }
+
+
+   /* awards */
+   .num-awards  p:not(.num-award p){
+    font-size: 2.9vw;
+   }
+
+   .awards-container .web-awards{
+    margin-top: 3rem;
+   }
+
+   .web-awards .web-award{
+    margin: 3rem 0 0;
+   }
+}
+
+@media screen and (max-width:440px){
+  /* awards */
+  .awards .award-title{
+    font-size: 1.8rem;
+  }
+  
+
+
+  .num-awards .category-num-awards .num-award{
+    padding: 1rem .5rem;
+    width: 100px;
+    height: auto;
+  }
+
+  .category-num-awards .num-award h5{
+    font-size: 11vw;
+  }
+
+  .category-num-awards .num-award p{
+    font-size: .6rem;
+  }
+}
+
+@media screen and (max-width:400px){
+  /* .hero */
+  .container_about .hero{
+    height: 235px;
+    
+  }
+
+  .container_about .hero .swiper{
+    height: 235px;
+  }
+
+  .container_about .hero .swiper .swiper-pagination{
+    right: 1rem;
+  }
+  .container_about .hero .swiper .swiper-pagination-bullet-active::before{
+    height: 75%; 
+  }
+  /* .hero content */ 
+  .container_about .hero .hero-content{
+    height: 175px;
+    width: 301px;
+
+    max-width: 90%;
+    backdrop-filter:none;
+  }
+
+  .container_about .hero-content h2{
+    font-size: 1.563rem; 
+    line-height: 30px;
+  }
+
+  .container_about .hero-content p{
+    font-size: 0.625rem;
+  }
+
+  .container_about .hero-content button{
+    width: 81.28px;
+    height: 21.46px;
+    font-size: 0.563rem;
+  } 
+
+  /* visi misi */
+  .about-visi h4{
+    font-size: 1.1rem; 
+  }
+
+  .information h5{
+    font-size: 3.5vw; 
+    line-height: normal;
+    
+  }
+
+  .service_country p,
+  .information p{
+    font-size: 2.7vw;
+  }
+ 
+    /* advantages */
+    .advantages-content_title h3{
+      font-size: .6rem;
+    }
+
+    .advantage h4{
+      font-size: .8rem;
+    }
+  
+    .advantage p{
+      font-size: .6rem; 
+      margin-top: .5rem;
+      max-width: 90%;
+    }
+
+    /* awards */
+ 
+}
+
+@media screen and (max-width:300px){
+  /* .hero content */ 
+  .container_about .hero .hero-content{
+    height: auto; 
+  }
+
+  /* visi misi */
+  .service_country p,
+  .information p{
+    font-size: 3.4vw;
+  }
+}
+
+
+
+ 
