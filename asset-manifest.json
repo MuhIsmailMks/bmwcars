@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bmwcars/static/css/main.b1edf7bf.css",
-    "main.js": "/bmwcars/static/js/main.545c35da.js",
+    "main.js": "/bmwcars/static/js/main.fb30eaf5.js",
     "static/js/787.8bbe7b5e.chunk.js": "/bmwcars/static/js/787.8bbe7b5e.chunk.js",
     "static/media/theNew3Series.mp4": "/bmwcars/static/media/theNew3Series.faa3d2a3ae380d75bcd0.mp4",
     "static/media/bmw10.png": "/bmwcars/static/media/bmw10.3d705a63d8e882246577.png",
@@ -115,11 +115,11 @@
     "static/media/showBtn.svg": "/bmwcars/static/media/showBtn.12f9c6ef5995710f063af6d58005b731.svg",
     "static/media/faqbutton.svg": "/bmwcars/static/media/faqbutton.cb18e48d3b4fc607c094.svg",
     "main.b1edf7bf.css.map": "/bmwcars/static/css/main.b1edf7bf.css.map",
-    "main.545c35da.js.map": "/bmwcars/static/js/main.545c35da.js.map",
+    "main.fb30eaf5.js.map": "/bmwcars/static/js/main.fb30eaf5.js.map",
     "787.8bbe7b5e.chunk.js.map": "/bmwcars/static/js/787.8bbe7b5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1edf7bf.css",
-    "static/js/main.545c35da.js"
+    "static/js/main.fb30eaf5.js"
   ]
 }
