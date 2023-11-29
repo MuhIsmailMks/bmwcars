@@ -1,4 +1,4 @@
-import React ,{useRef,useState,useEffect} from 'react' 
+import React ,{useEffect} from 'react' 
 
 // swiper slider 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,10 +11,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 // animation 
-import { delay, motion ,useAnimation} from 'framer-motion'; 
+import { motion ,useAnimation} from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer';
 
-import { AnimatedTextCharacter,ElementAnimation } from './HomeComponents';
+import { ElementAnimation } from './HomeComponents';
 
 // data
 import { AwardsCategory, TestimonialsClient, advantagesProduct,textInformation } from '../assets/DataComponents'; 
@@ -213,9 +213,9 @@ export function WebAwards(){
        key={i}
        delay={1.2 + i / 2}
        startPositionX={100}
+       classContainer={"web-award d-flex"}
        element={
-        
-        <div className="web-award d-flex" key={i}>
+         <>
 
             <div className="image">
             <img src={award.image} alt="" />
@@ -232,9 +232,8 @@ export function WebAwards(){
                 <h5>{award.aboutCategory}</h5>
               </div>
 
-            </div>
-        </div>
-
+            </div> 
+        </>
        }
     />
     ))}

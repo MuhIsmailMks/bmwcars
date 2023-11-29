@@ -95,21 +95,11 @@ function Home() {
     })
 
 
-    // dark icon 
-   
-    // const [darkIcon,setDarkIcon] = useState(false)  
-    // useEffect(() => {
-    //   if(darkActive === false){
-    //     setDarkIcon(!darkIcon);
-    //   }
-    // }, []); 
-
-
   return (
     <div className='container_home'> 
 
-      <header className=''>
-        <div className="bgheader" >
+      <div className='main-car'>
+        <div className="bgmain-car" >
           <img src={bgHeader} alt="bgHeader" />
         </div> 
  
@@ -118,20 +108,22 @@ function Home() {
         </div>
 
 
-        <div className="header-content d-flex">
+        <div className="main-car-content d-flex">
 
-            <div className="about_car-header">
+            <div className="about_car-main-car">
               <section>  
                 <h2 className='type_car'>
                     <AnimatedTextCharacter text={'The M8'} delay={.9}/>
                 </h2>  
 
                 <ElementAnimation
-                 element={<div className="lines d-flex">
-                                  <div className="line" style={{backgroundColor:'#5B99D4'}}></div>
-                                  <div className="line" style={{backgroundColor:'#01355C'}}></div>
-                                  <div className="line" style={{backgroundColor:'#E62526'}}></div>
-                           </div> }
+                classContainer={"lines d-flex"}
+                 element={<>
+                            <div className="line" style={{backgroundColor:'#5B99D4'}}></div>
+                            <div className="line" style={{backgroundColor:'#01355C'}}></div>
+                            <div className="line" style={{backgroundColor:'#E62526'}}></div>
+                           </>
+                     }
                   />
 
                 <TextOpacityAnimation startPositionX={-20} endPositionX={0} text={"The BMW M8 Competition are characterised by outstanding performance, fascinating luxury and a confident appearance."}/>
@@ -166,7 +158,7 @@ function Home() {
 
 
         </div>
-      </header>
+      </div>
  
       <div className="about-car d-flex scroll-section" id='section1'>
 
@@ -174,7 +166,7 @@ function Home() {
         <section>
       
               <div className="about-car_title d-flex">
-                <LinesAnimation  />
+                <LinesAnimation  /> 
                 <h2  className='about'><AnimatedTextCharacter text={'About Car'} delay={1}/></h2> 
               </div>
 

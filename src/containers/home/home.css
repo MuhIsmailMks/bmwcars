@@ -20,7 +20,7 @@
     overflow-x: hidden;
 }  
 
-body.dark .gradient_header{ 
+body.dark .gradient_main-car{ 
     background: linear-gradient(0deg, var(--dark-mode-bg) 74.38%, var(--dark-mode-bg) 8.28%, rgba(241, 241, 241, 0.00) 100%); 
 }
 
@@ -36,8 +36,8 @@ body.dark .gradient_header{
     width: auto;
 }
  
-/* header */
-.container_home header{
+/* main-car */ 
+.container_home .main-car{
     height: 900px;
     width: 100%;
     position: relative;   
@@ -46,8 +46,8 @@ body.dark .gradient_header{
     overflow: hidden; 
 }
 
-/* bgh header */
-header .bgheader{
+/* bg main-car */
+.main-car .bgmain-car{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -58,15 +58,15 @@ header .bgheader{
     z-index: 0; 
 }
 
-.bgheader img{
+.bgmain-car img{
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
  
  
-/* img header */
-header .bgImg{
+/* img main-car */
+.main-car .bgImg{
     position: absolute;
     height: auto;
  
@@ -82,8 +82,8 @@ header .bgImg{
     object-fit: contain;
 }
 
-/* header content */
-.header-content{
+/* main-car content */
+.main-car-content{
     position: relative;
     height: 80%;
     width: 87%;
@@ -96,7 +96,7 @@ header .bgImg{
     justify-content: space-between;
 }
 
-.about_car-header{
+.about_car-main-car{
     width: 400px;
     height: 300px; 
     position: relative;
@@ -104,7 +104,7 @@ header .bgImg{
     font-family: var(--font-prompt);
 }
 
-.about_car-header h2{
+.about_car-main-car h2{
     color: #D9D9D9;
     font-size: 3.75rem; 
     font-style: italic; 
@@ -114,7 +114,7 @@ header .bgImg{
 
 }
 
-.about_car-header .lines{
+.about_car-main-car .lines{
     width: 310px;
     height: 9px; 
     gap: 0;
@@ -131,7 +131,7 @@ header .bgImg{
     margin-left: -15px;
 }
 
-.about_car-header p{
+.about_car-main-car p{
     color: #C1C1C1;
     width: 360px;
     font-size: 1.0625rem;
@@ -1168,7 +1168,7 @@ header .bgImg{
 
 /* dark mode */ 
 
-/* body dark background content */
+/* body dark background content */ 
 body.dark .express_colors,
 body.dark .color .color-car,
 body.dark .specification_content{
@@ -1211,12 +1211,12 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 
 /* responsive */
 @media screen and (min-width:1800px) {
-    /* header */
-   .container_home  header{
+    /* main-car */
+   .container_home  .main-car{
         height: 830px;
     }
  
-    header .bgImg{
+    .main-car .bgImg{
         transform: translate(-50%);
         left: 50%;
     } 
@@ -1228,19 +1228,18 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1800px) {
-    /* header */
-    header .bgheader{
+    /* main-car */
+    .main-car .bgmain-car{
         display: none;
     }
 
-    .about_car-header{
+    .about_car-main-car{
         margin-left: 1.5rem;
     } 
 }
 
-@media screen and (min-width:1650px) {
-
-    .about_car-header{
+@media screen and (min-width:1650px) { 
+    .about_car-main-car{
         margin-top: 4rem;
     }
 }
@@ -1277,20 +1276,20 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (min-width:1450px) and (max-width:1650px) {
-    /* header */
-    .container_home  header{
+    /* main-car */
+    .container_home  .main-car{
         height: 678px;
         overflow: hidden;
 
         margin-bottom: 10.313rem;
     }
 
-    .gradient_header{
+    .gradient_main-car{
         bottom: -90px;
         height: 310px;
     }
 
-    .about_car-header{ 
+    .about_car-main-car{ 
         padding-top: 3rem;
     }
 
@@ -1302,17 +1301,17 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 } 
 
 @media screen and (max-width:1456px){
-    /* header */ 
-    .about_car-header h2{ 
+    /* main-car */ 
+    .about_car-main-car h2{ 
         font-size: 3rem; 
     }
     
-    .about_car-header{
+    .about_car-main-car{
         margin-top: 2rem;
         margin-left: 0rem;
     }
 
-    .about_car-header p{
+    .about_car-main-car p{
         width: 310px;
         font-size: .9rem;
     }
@@ -1344,8 +1343,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1400px){
-    /* header */
-    .container_home header{
+    /* main-car */
+    .container_home .main-car{
         height: 600px;
         overflow: hidden;
         margin-bottom: 9rem;
@@ -1490,8 +1489,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1200px){
-    /* header */
-    .container_home header{ 
+    /* main-car */
+    .container_home .main-car{ 
         height: 750px;
     }
 
@@ -1549,8 +1548,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1100px){
-    /* header */
-    .container_home  header{
+    /* main-car */
+    .container_home  .main-car{
         height: 700px;
     } 
 
@@ -1721,8 +1720,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1000px){ 
-    /* header */
-    .container_home header{ 
+    /* main-car */
+    .container_home .main-car{ 
         height:70vmax;
         max-height: 670px;
     } 
@@ -1791,23 +1790,23 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:900px){ 
-    /* header */
-    .container_home header{
+    /* main-car */
+    .container_home .main-car{
         height: 70vw;
     }
-    .header-content{
+    .main-car-content{
         padding-top: 3rem;
     }
 
-    .about_car-header h2{
+    .about_car-main-car h2{
         font-size: 2.5em;
     }
 
-    .about_car-header p{
+    .about_car-main-car p{
         font-size: .8rem;
     }
 
-    .header-content .line{
+    .main-car-content .line{
         height: 7px;
     }
 
@@ -2035,8 +2034,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:800px){
-    /* header */
-    header{
+    /* main-car */
+    .main-car{
         height: 500px;
     }
  
@@ -2226,20 +2225,20 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:640px){
-    /* header */
-    header{
+    /* main-car */
+    .main-car{
         height: 490px;
     }
 
-    /* header content */
-    .about_car-header{ 
+    /* main-car content */
+    .about_car-main-car{ 
         width: auto;
     }
-    .about_car-header h2{
+    .about_car-main-car h2{
         font-size: 2rem;
     }
 
-    .about_car-header p{
+    .about_car-main-car p{
         width: 330px;
         font-size: .75rem; 
     }
@@ -2265,7 +2264,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         height: 14px; 
     }
 
-    .about_car-header .lines{
+    .about_car-main-car .lines{
         width: 260px;
         height: 3px;
     } 
@@ -2327,18 +2326,18 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 
 
 @media screen and (max-width:580px){
-    /* header */
-    header{
+    /* main-car */
+    main-car{
         height: 430px;
     }
-    .header-content{ 
+    .main-car-content{ 
         padding-top: 1.5rem;
     }
-    .about_car-header .lines{
+    .about_car-main-car .lines{
         width: 200px; 
     }  
 
-    .about_car-header p{
+    .about_car-main-car p{
         width: 280px;
         font-size: 10px;
     }
@@ -2437,7 +2436,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:500px){
-    header{
+    .main-car{
         height: 330px; 
     }
     /* about */
@@ -2588,7 +2587,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 
 
 @media screen and (max-width:430px){ 
-    .container_home header{
+    .container_home .main-car{
         height: 500px;
     }
     /* about car */
@@ -2599,23 +2598,23 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:400px){
-    /* header */
-    .container_home  header{
+    /* main-car */
+    .container_home  .main-car{
         min-height: 300px;
         height: 390px; 
 
         margin: 0;
     }
 
-    .about_car-header{
+    .about_car-main-car{
         max-width: 100%; 
     }
 
-    .about_car-header p{
+    .about_car-main-car p{
         max-width: 90%;
     }
 
-    .header-content{
+    .main-car-content{
         width: 100%;
         height:200px; 
          
@@ -2624,31 +2623,38 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         padding: 1.5rem 0;
     }
 
-    .about_car-header{
+    .about_car-main-car{
         height: 100px;
     }
 
-    .about_car-header .lines{ 
-        transform: translateX(45%);
-        width: 164px;
+    .about_car-main-car .lines{  
+        width: 90%;
         height: 3px;   
+
+        margin: 0 auto;
+        justify-content: center;
+        
     }
 
-    .about_car-header h2 .container-text-animation{
+    .main-car-content .line{
+        height: 100%;
+        clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+    }
+
+    .about_car-main-car h2 .container-text-animation{
         max-width: 100%; 
          
         margin: 1rem auto;
-
-        transform: translate(38%,0%);
-        left: 50%;
+ 
+        justify-content: center;
     } 
 
-    .about_car-header h2{ 
-        font-size: 1.25rem;  
+    .about_car-main-car h2{ 
+        font-size: 1.85rem;  
         position: relative;
     }
 
-    .about_car-header p{ 
+    .about_car-main-car p{ 
         font-size: 0.625rem; 
         width: 277px;
         max-width: 90%;
@@ -2658,13 +2664,16 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     
     .car_advantage{ 
         left: 0;
-        top: 40%;
+        gap: 6vw;
+        top: 63vi;
     }
  
     .car_advantage p{ 
         font-size: 0.4375rem;
         margin-top: 1.5rem;
     }
+
+
 
     /* about car */
     .container_home .about-car{ 
@@ -2707,6 +2716,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     .specification .specification_content{
         width: 142px;  
         min-width: 100px;
+        height: 150px;
+        max-height: 240px;
     }
     
         .specification_cars-container  .specification_content:nth-child(1) .icon::before{
@@ -2725,6 +2736,9 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
             font-size: 7px; 
             margin: .4rem auto;
         }
+
+
+
     /* images */
     .images{
         height: 400px; 

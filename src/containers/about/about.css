@@ -1689,7 +1689,19 @@ body.dark .container_about .slide-limits{
     height: 105%;
     top: -15px;
   }
-  /* awards */
+
+
+  /* awards */   
+  .num-awards .award-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .awards .category-num-awards{
+    justify-content: center;
+    gap: 1.5rem;
+  }
 
   .award-description h4{
     text-align: center;

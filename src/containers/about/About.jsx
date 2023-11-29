@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./about.css";
 
 import {
@@ -230,11 +230,12 @@ function About() {
                 ].map(({numAward,typeAward},i) => ( 
                   <ElementAnimation
                     key={i}
+                    classContainer={"num-award d-center"}
                     element={
-                      <div className="num-award d-center">
+                      <  >
                         <h5>{numAward}</h5>
                         <p>{typeAward}</p>
-                      </div>
+                      </>
                     }
                     delay={1.2 + i / 2}
                   />

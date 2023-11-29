@@ -18,8 +18,10 @@
    
 
 .contact-container{
-    height: 800vh;
+    height: auto;
     width: 100%; 
+    max-width: 100%;
+    overflow: hidden;
 
     position: relative;
 }
@@ -66,7 +68,12 @@
   font-weight: 400;
   letter-spacing: 5px;
 
-  margin: 0;
+  margin: 0; 
+  gap: 1rem; 
+}
+
+.contact-container .about-page h2 .container-text-animation:not(span .container-text-animation ) span{
+  color: white;
 }
 
 .contact-container .about-page .lines_title{
@@ -87,6 +94,10 @@
   width: 100%;
   height: auto;
   position: relative;
+}
+
+.contact-container .about-page section div{
+  max-width: 100%;
 }
 
 .contact-container .about-page section p{
@@ -110,7 +121,7 @@
 .contact-information{
   width: 100%;
   height: 400px;
-  position: relative; 
+  position: relative;  
 }  
 
 .detail-contact{
@@ -137,7 +148,7 @@
 }
 
 .detail-contact:nth-child(3)::before{
-  left: 0;
+  left: 0;  
 }
 
 .contact-icon{
@@ -181,7 +192,7 @@
   font-family: var(--font-inter);
   color: var(--text-primary-clr);
   font-weight: 400;
-  font-size: 1.188rem;
+  font-size: 1.188rem; 
   text-align: center;
 
   width: 100%;
@@ -194,6 +205,160 @@
 }
 
 
+
+
+
+/* Frequently Asked Questions */
+.faq-container{
+  width: 100%;
+  height: auto;
+  position: relative;  
+  margin: 3rem 0  ;
+}
+
+.faq-article-text{
+  font-family: var(--font-inter);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.faq-container h2{
+  font-size: 2.188rem;
+  font-family: var(--font-lato);
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+.faq-container main{ 
+  position: relative;
+
+  padding: 0 3rem;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+/* faq */
+.faq-container main .words-faq-container{
+  width: auto;
+  height: auto;
+  position: relative;
+
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.words-faq-container .faq{
+  width: 600px;
+  height: 70px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+ 
+  padding: 0 1rem;
+
+  transition: all .4s ease-in-out ;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+ 
+
+.faq.active{ 
+  height: 200px;
+}
+
+.faq::before{
+  content: "";
+  top: 70px;
+
+  margin: 0 auto; 
+  height: 1px;
+  width: 0%;
+  background-color: var(--primary-color);
+  position: absolute;
+  transition: all .4s ease-in-out ;
+}
+
+.faq.active::before{
+  width: 95%;
+}
+
+.faq.active .question::before{
+  transform: rotate(180deg);
+}
+
+.faq .question{
+  position: relative;
+   height: 75px; 
+   
+  transition: all .4s ease-in-out ;
+}
+
+.faq .question::before{
+  content: "";
+
+  background-image: url(/src/icons/faqbutton.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  transition: all .4s ease-in-out ;
+
+  right: 0;
+  width: 45px;
+  height: 24px; 
+} 
+
+.faq h4{
+  font-weight: 600;
+  font-size: 1.188rem;
+  font-family: var(--font-inter);
+  width: 80%;
+}
+
+.faq .answer{
+  width: 100%;
+
+  position: relative;
+  transition: all .4s ease-in-out ;
+
+  display: none;
+  opacity: 0;
+}
+
+.faq.active .answer{
+  transition: all .4s ease-in-out ;
+  
+  display: flex;
+  opacity: 1;
+}
+
+/* about-faq */
+.about-faq{
+  width: 50%;
+  position: relative;
+
+  flex-direction: column;
+}
+
+.about-faq section{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about-faq section h5{
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0;
+}
 
 
 
@@ -213,7 +378,7 @@
 
   font-weight: 600;
   font-family: var(--font-inter);
-  font-size: 1.313rem;
+  font-size: 1.188rem;
 }
 
 .question-form form{
@@ -262,6 +427,33 @@
   cursor: pointer;
 }
 
+
+
+/* location */
+.contact-container .location{
+  width: 100%;
+  height: auto; 
+  position: relative;
+}
+
+.location img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 100%; 
+}
+ 
+
+/* body dark */
+body.dark .question-form form input{
+  color: var(--dark-mode-text);
+}
+
+body.dark .question-form form input::placeholder{
+  color: rgb(194, 194, 194);
+}
+
+
 /* responsive */
 @media screen and (max-width:1480px) {
   /* hero section */ 
@@ -291,6 +483,26 @@
   }
 }
 
+@media screen and (max-width:1300px){
+  /* Frequently Asked Questions */ 
+  .words-faq-container .faq{
+    width: 500px;
+  }
+
+  .faq h4{
+    font-size: 1.1rem;
+  }
+
+  .faq .question::before{
+    width: 36px;
+    height: 20px;
+  }
+
+  .faq-article-text{
+    font-size: 1rem;
+  } 
+
+}
 
 @media screen and (max-width:1200px) {
   /* hero section */  
@@ -346,6 +558,10 @@
 
     padding: .5rem 1.1rem;
   }
+
+  .about-faq{
+    width: 40%;
+  }
 }
 
 @media screen and (max-width:1000px){
@@ -357,6 +573,46 @@
     object-fit: cover;
   }
    
+  
+  /* Frequently Asked Questions */ 
+  .faq-container h2{
+    font-size: 1.8rem;
+  }
+
+  .faq-container main{
+    flex-direction: column;
+  }
+
+  .main-faq{
+    width: 70%;
+  } 
+
+  .words-faq-container .faq{
+    width: 100%;
+  }
+
+  .faq h4{
+    font-size: 2vw;
+  }
+
+  .faq-article-text{
+    font-size: 1.6vw;
+  }
+
+  .faq.active{
+    height: 170px;
+  }
+
+  .about-faq{
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+
+  /* question form */
+  .input-container{
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width:800px){
@@ -437,6 +693,48 @@
     }
 }
 
+@media screen and (max-width:700px) {
+  /* hero container */
+  .contact-container .about-page section div p{
+    width: 90%;
+  }
+
+   /* Frequently Asked Questions */ 
+    .faq-container h2{
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    } 
+  
+    .words-faq-container .faq{
+      width: 100%;
+      height: 60px;
+    }
+
+    .faq::before{
+      top: 60px; 
+    }
+
+    .faq.active::before{
+      width: 90%;
+    }
+
+    .faq .question{
+      height: 60px;
+    }
+  
+    .faq h4{
+      font-size: .9rem; 
+    }
+  
+    .faq-article-text{
+      font-size: .8rem;
+    }
+  
+    .faq.active{
+      height: 150px;
+    }
+}
+
 @media screen and (max-width:500px){
   /* hero section */
   .contact-container .about-page h2{
@@ -459,9 +757,21 @@
     width: 80%;
   }
 
+
+
+  /* faq */
+  .main-faq{
+    width: 95%;
+  }
+
+
   /* question form */
   .question-form h4{
     font-size: .9rem;
+  }
+
+  .question-form form{
+    gap: 1.5rem;
   }
 
   .question-form form button{
@@ -469,9 +779,15 @@
     letter-spacing: 2px;
   }
 
+
   .question-form form input{
     font-size: .8rem;
     border-bottom: 1.8px solid var(--primary-color);
+  }
+ 
+
+  .about-faq section h5{
+    font-size: 1rem;
   }
 
 }
@@ -485,5 +801,46 @@
   .contact-container .about-page section p{
     font-size: .8rem;
     line-height: 20px; 
+  }
+
+  
+  /* Frequently Asked Questions */  
+  .faq-article-text{
+    font-size: 3vw;
+  }
+  
+  .faq-container h2{
+    font-size: 1.2rem; 
+  }
+
+  .words-faq-container .faq{
+    width: 100%;
+    height: 65px;
+  }
+
+  .faq::before{
+    top: 65px; 
+  }
+
+  .faq.active::before{
+    width: 90%;
+  }
+
+  .words-faq-container .faq.active{
+    height: 150px;
+  } 
+
+  .faq .question::before{
+    width: 30px;
+    height: 16px;
+  }
+
+  .faq h4{
+    font-size: .8rem;
+  }
+
+
+  .question-form form input{
+    font-size: .65rem; 
   }
 }

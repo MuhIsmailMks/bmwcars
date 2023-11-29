@@ -1,21 +1,21 @@
 import React ,{useRef,useState,useEffect} from 'react' 
 
 // Import Swiper React components
-import { Autoplay, Pagination, Navigation,EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { motion,useAnimationFrame } from 'framer-motion';  
+import { motion } from 'framer-motion';  
 
 // components animation
-import { AnimatedTextCharacter } from '../components/HomeComponents';
+import { ElementAnimation } from '../components/HomeComponents';
 
 // data components
-import { ModelsHeaderImages,DriveModes,SeriesModelCars ,MSeriesModelCars, XSeriesModelCars, IseriesModelCars} from '../assets/DataComponents'
+import { ModelheroImage,DriveModes} from '../assets/DataComponents'
 
 import showCarButton from '../icons/showBtn.svg'
-
+// https://id.pinterest.com/pin/624804148319245731/
  
 
-export const ModelHeaderImage = () => {
+export const ModelHeroImages = () => {
     
   // images slider 
   const variants ={
@@ -41,7 +41,7 @@ export const ModelHeaderImage = () => {
                 modules={[Autoplay,Pagination, Navigation]}
                 className="container-car-slide"
               >
-                {ModelsHeaderImages.map((car,i) => (
+                {ModelheroImage.map((car,i) => (
                     <SwiperSlide className='slide-image d-center' key={i} >
                     <motion.div
                         initial="hidden"
@@ -50,7 +50,7 @@ export const ModelHeaderImage = () => {
                         className='slide-image'
                         > 
 
-                            <div className="model-car-header">
+                            <div className="model-car-hero">
                                     <span>THE</span>
                                     <h2>{car.seriesCar}</h2>
                             </div>
@@ -59,7 +59,7 @@ export const ModelHeaderImage = () => {
                                   <img src={car.imageCar} alt="" />
                            </div>
 
-                            <div className="about-car-header d-flex">
+                            <div className="about-car-hero d-flex">
 
                                     <div className="speed">
                                         <h4>Top Speed</h4>
@@ -99,27 +99,33 @@ export const DriveModesComponents = () => {
         <>
          {
             DriveModes.map((mode,i) => (
-                <div className="drive-mode d-flex" key={i}>
+                <ElementAnimation
+                delay={.1 + i / 2}
+                element={
+                    <div className="drive-mode d-flex" key={i}>
 
-                <div className="icon">
-                  <span className="d-center">
-                    <img src={mode.icon} alt="" />
-                  </span>
-                </div>
+                    <div className="icon">
+                    <span className="d-center">
+                        <img src={mode.icon} alt="" />
+                    </span>
+                    </div>
 
-                <div className="about-mode">
-                  <h5>{mode.driveName}</h5>
-                  <p> {mode.aboutDrive} </p>
-                </div>
-                
-            </div>
+                    <div className="about-mode">
+                    <h5>{mode.driveName}</h5>
+                    <p> {mode.aboutDrive} </p>
+                    </div>
+                    
+                    </div>
+
+                }
+                />
 
             ))
          }
         </>
     )
 }
- 
+  
 // components for series car
 export const SeriesCarsComponents = ({seriesCar,title}) => {
      // resize window  
@@ -145,10 +151,10 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
         
         if(width >= 1600){
             return 6
-        } else if (width <= 1600 && width >= 1190 || width <= 1000 && width >= 600){
+        } else if (width <= 1600 && width >= 1190 || width <= 1000 && width >= 500){
             return 5 // same with 4 card
-        } else if (width <= 1190){
-            return 4
+        } else if (width <= 500){
+            return 3
         }
       }
 
@@ -164,22 +170,28 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
         return 5
     } else if (width <= 1600 && width >= 1190){
         return 4
-    } else if (width <= 1190){
+    } else if (width <= 1190 && width <= 500){
         return 3
-    }
+    } 
    }
 
     let showButton = useRef(null);   
  
 
-    const showCar = () => {
-        setCarCount((prevCount) => prevCount + changeValueButton());
-
-        if(seriesCar.length === carCount + 1 || seriesCar.length <= carCount ){  
+    const showCar = () => { 
+            setCarCount((prevCount) => prevCount + changeValueButton()); 
+            if(seriesCar.length === carCount + 1 || seriesCar.length === carCount || seriesCar.length === carCount + 2){  
+                showButton.current.classList.add("showButton");
+            }  
+    }  
+    
+    useEffect(() => {
+        if(seriesCar.length === carCount + 1 || seriesCar.length >= carCount  + 1  || seriesCar.length === carCount ){  
+            showButton.current.classList.remove("showButton");
+        } else {
             showButton.current.classList.add("showButton");
         } 
-
-    }    
+    },[])
  
     return(
         <div className="container-model-car">
@@ -189,7 +201,13 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
         <div className="models-container">
             {
                 seriesCar.map((car,i) => (
-                    <div className={`model-car ${i + 1 < carCount ? '' : 'none'}`} key={i}>
+                    <ElementAnimation
+                       delay={.3 + i / 2}
+                       key={i}
+                       classContainer={`model-car ${i + 1 < carCount ? '' : 'none'}`}
+                      element={
+
+                        <    >
 
                         <div className="image d-center">
                         <div className="vector">
@@ -240,7 +258,10 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
                             <button>View Car</button>
                         </div>
 
-                  </div>
+                    </>
+
+                      }
+                    />
                 ))
             }
 
@@ -261,8 +282,7 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
 
 
 export default { 
-    ModelHeaderImage, 
-    DriveModesComponents,
-
+    ModelHeroImages, 
+    DriveModesComponents, 
     SeriesCarsComponents,
 }

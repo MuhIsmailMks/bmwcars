@@ -1,5 +1,3 @@
-import React from 'react';
-
 // icons
 import engineIcon from '../icons/engineIcon.svg'  
 import wheelsIcon from '../icons/wheelIcon.svg' 
@@ -53,23 +51,31 @@ import the750li from '../images/750li.webp'
 
 
 // images car for model
-// series
-import the228i_2022 from '../images/228i-2022.webp'
+// series 
+import the228i_2022 from '../images/228i-2022.webp' 
 import the330i_2022 from '../images/330i-2022.webp'
 import the340i_2022 from '../images/340i-2021.webp'
 import the430i_2023 from '../images/430-2023.webp'
 import the530i_2018 from '../images/530i-2018.webp'
 import the530i_2022 from '../images/530i-2022.webp'
+import the740i_2023 from '../images/the740i-2023.webp'
 
 
 // M series 
 import theM240iCS_2022 from '../images/m240ics.webp'
+import theM3_2023 from '../images/theM3-2023.webp'
+import theM4CSL_2023 from '../images/theM4csl-2023.webp'
 import theM550i_2019 from '../images/m550i-2019.webp'
+import theM760li_2019 from '../images/them760li-2019.webp'
+import theM8_2020 from '../images//theM8-2020.webp'
 
 
 // X series
 import theX1_2023 from '../images/theX1-2023.webp'
 import theX3_2023 from '../images/theX3-2023.webp'
+import theX5_2023 from '../images/theX5-2023.webp'
+import theX6_2023 from '../images/theX6-2023.webp'
+import theX7_2021 from '../images/theX7-2021.webp'
 
 
 // I Electric series 
@@ -340,7 +346,7 @@ export const TestimonialsClient = [
 
 
 // MODELS
-export const ModelsHeaderImages = [
+export const ModelheroImage = [
     {
         seriesCar:'X7',
         imageCar:X7,
@@ -378,8 +384,7 @@ export const DriveModes = [
 ]
 
 // series models
-export const SeriesModelCars = [
-       // 2 Series
+export const SeriesModelCars = [ 
      {
         imgCar: the228i_2022,
         altImg : 'coupe 2 series',
@@ -389,9 +394,7 @@ export const SeriesModelCars = [
         engineCar: "2.0L , 4-Cylinder",
         fuelCar: "60L,  6.8  / 100km",
         overviewCar: "BMW 228i and 228i xDrive Coupes deliver sporty style and energetic performance and advanced driving technology.",
-    }, 
-
-    // 3 Series
+    },  
     {
         imgCar: the330i_2022,
         altImg : 'the new 3 series',
@@ -411,9 +414,7 @@ export const SeriesModelCars = [
         engineCar: "3.0L ,6-Cylinder",
         fuelCar: "71L,  7.2L / 100km",
         overviewCar: "2021 BMW 3 Series M340i xDrive series AWD powered by 3.0L Inline-6,Engine  8-Speed Automatic.",
-    }, 
-
-     // 4 Series
+    },  
     {
         imgCar: the430i_2023,
         altImg : 'the new 4 series',
@@ -423,9 +424,7 @@ export const SeriesModelCars = [
         engineCar: "2.0L , 4-Cylinder",
         fuelCar: "70L,   5.7 / 100km",
         overviewCar: "BMW 4-series  sedan on which it’s based, and the 4-series a look entirely different from its four-door.",
-    }, 
-
-    // 5 Series
+    },  
     {
         imgCar: the530i_2018,
         altImg : 'the new 5 series',
@@ -446,34 +445,22 @@ export const SeriesModelCars = [
         fuelCar: "82L,  6.2L / 100km",
         overviewCar: "The BMW 5 Series 2022 lives up to the expectations set by its forebears. There's an engine for nearly every taste.",
     }, 
-
-
-    //999999999999999999999999
     {
-        imgCar: the530i_2018,
-        altImg : 'the new 5 series',
-        modelCar: "530i",
-        priceCar: "52,650",
-        yearCar: "2018",
-        engineCar: "2.0L , 4-Cylinder Inline",
-        fuelCar: "81L,  6.5L / 100km",
-        overviewCar: "2018 BMW 5 Series 530i 4dr series The size of this model is much roomier than previous.",
+        imgCar: the740i_2023,
+        altImg : 'the new 7 series',
+        modelCar: "740i",
+        priceCar: "96,695",
+        yearCar: "2023",
+        engineCar: "3.0L , 6-Cylinder",
+        fuelCar: "88L, 8L / 100km",
+        overviewCar: "An entirely new generation of the 7-series,  the brand's most luxurious and advanced product, has debuted for the 2023 model year.",
     }, 
-    {
-        imgCar: the530i_2022,
-        altImg : 'the new 5 series',
-        modelCar: "530i",
-        priceCar: "56,500",
-        yearCar: "2022",
-        engineCar: "2.0L , 4-Cylinder",
-        fuelCar: "82L,  6.2L / 100km",
-        overviewCar: "The BMW 5 Series 2022 lives up to the expectations set by its forebears. There's an engine for nearly every taste.",
-    },   
+
+ 
  
 ]
 
 export const MSeriesModelCars = [
-     // 2 Series
      {
         imgCar: theM240iCS_2022,
         altImg : 'the M2 CS',
@@ -484,7 +471,26 @@ export const MSeriesModelCars = [
         fuelCar: "52L,  10.4L/100km",
         overviewCar: "M2 CS, a limited-edition coupe with high-power thrills and performance, and build your own M2 CS with the online configurator.",
     }, 
-    // 5 Series
+    {
+        imgCar: theM3_2023,
+        altImg : 'the M3',
+        modelCar: "M3",
+        priceCar: "83,595",
+        yearCar: "2022",
+        engineCar: "3.0L , 6-Cylinder",
+        fuelCar: "72L,  12.4L/100km",
+        overviewCar: "The M3 is BMW's most iconic driver's car, and the current model shows that the company still remembers what made many previous M cars instant favorites. ",
+    }, 
+    {
+        imgCar: theM4CSL_2023,
+        altImg : 'the M4 CSL',
+        modelCar: "M4 CSL",
+        priceCar: "140,895",
+        yearCar: "2023",
+        engineCar: "4.4L , 8-Cylinder",
+        fuelCar: "60L,  13.4L/100km",
+        overviewCar: "The M3 is BMW's most iconic driver's car, and the current model shows that the company still remembers what made many previous M cars instant favorites. ",
+    }, 
     {
         imgCar: theM550i_2019,
         altImg : 'the M550i ',
@@ -492,8 +498,28 @@ export const MSeriesModelCars = [
         priceCar: "74,450",
         yearCar: "2019",
         engineCar: "4.4L , 8-Cylinder",
-        fuelCar: "81L,  10.6L/100km",
+        fuelCar: "81L,  11.6L/100km",
         overviewCar: "with BMW M550i for its face-flattening acceleration. All 5 Series versions provide a healthy dose of technology.",
+    }, 
+    {
+        imgCar: theM760li_2019,
+        altImg : 'the M760li ',
+        modelCar: "M760li",
+        priceCar: "180,000",
+        yearCar: "2019",
+        engineCar: "6.6L , 12-Cylinder",
+        fuelCar: "90L,  14L/100km",
+        overviewCar: "TheBMW M760Li xDrive Sedan is in itself enough to promise the perfect symbiosis of the most sublime elegance and maximum performance.  ",
+    }, 
+    {
+        imgCar: theM8_2020,
+        altImg : 'the M8 ',
+        modelCar: "M8",
+        priceCar: "140,995",
+        yearCar: "2020",
+        engineCar: "4.4L , 8-Cylinder",
+        fuelCar: "90L,  12L/100km",
+        overviewCar: "BMW introduces a new flagship for its vaunted M performance division with the 2020 M8. ",
     }, 
 ]
 
@@ -506,17 +532,47 @@ export const XSeriesModelCars = [
         yearCar: "2023",
         engineCar: "2L , 4-Cylinder",
         fuelCar: "51L,  7.8L/100km",
-        overviewCar: "the new BMW X1 has come to set standards. Its eagerness for action is shown above all in its athletic design.",
+        overviewCar: "The new BMW X1 has come to set standards. Its eagerness for action is shown above all in its athletic design.",
     },  
     {
         imgCar: theX3_2023,
         altImg : 'the X3',
         modelCar: "X3",
-        priceCar: "41,277",
+        priceCar: "46,200",
         yearCar: "2023",
         engineCar: "2L , 4-Cylinder",
-        fuelCar: "51L,  7.8L/100km",
-        overviewCar: "the new BMW X1 has come to set standards. Its eagerness for action is shown above all in its athletic design.",
+        fuelCar: "65L,  8.4L/100km",
+        overviewCar: "The 2023 BMW X3 is a compact luxury SUV that offers a blend of performance, comfort, and technology.",
+    }, 
+    {
+        imgCar: theX5_2023,
+        altImg : 'the X5',
+        modelCar: "X5",
+        priceCar: "61,600",
+        yearCar: "2023",
+        engineCar: "3L , 6-Cylinder",
+        fuelCar: "83L,  10.1L/100km",
+        overviewCar: "With the BMW X5, you experience exceptional interior comfort and innovative functionality in a sporty design.",
+    }, 
+    {
+        imgCar: theX6_2023,
+        altImg : 'the X6',
+        modelCar: "X6",
+        priceCar: "70,100",
+        yearCar: "2023",
+        engineCar: "3L , 6-Cylinder",
+        fuelCar: "83L,  12.5L/100km",
+        overviewCar: "The BMW X6 is a luxury SUV with a sleek look,  It has a comfortable and quiet ride, and strong acceleration from both.",
+    }, 
+    {
+        imgCar: theX7_2021,
+        altImg : 'the X7',
+        modelCar: "X7",
+        priceCar: "75,895",
+        yearCar: "2021",
+        engineCar: "4.4L , 6-Cylinder",
+        fuelCar: "95L,  11.2L/100km",
+        overviewCar: "The 2021 BMW X7 is the brand's biggest people mover and brings an undeniably upscale aura and impressive levels of performance.",
     }, 
 ]
 
@@ -562,4 +618,29 @@ export const IseriesModelCars = [
         fuelCar: "111.5 kWh,  425 /km",
         overviewCar: "The first fully electric BMW i7 combines electric performance and multisensory entertainment to produce an unforgettable motoring experience.",
     },
+]
+
+
+// faq
+export const frequentlyAsked = [
+    {
+        question:'What should I consider when buying a new car?',
+        answer:'You should consider your budget, the type of car that suits your needs, the features you want, fuel efficiency, and reviews and safety ratings.'
+    },
+    {
+        question:'What is the difference between electric, hybrid and conventional cars?',
+        answer:'Electric cars run entirely on electricity, while hybrid cars have a petrol engine and an electric motor. Conventional cars rely on petrol or diesel engines.'
+    },
+    {
+        question:'What documents do I need to prepare when buying a car?',
+        answer:`Documents that may be required include a driver's license, ID card, insurance documents, and previous vehicle ownership papers.`
+    },
+    {
+        question:'What is anti-lock braking system (ABS)?',
+        answer:'The ABS system is a braking technology that prevents the wheels from locking up during hard braking, helping the driver maintain control of the car.'
+    },
+    {
+        question:'How do you care for car paint to keep it looking new?',
+        answer:'Caring for car paint involves washing it regularly, avoiding direct sunlight, and protecting it from scratches.'
+    }
 ]

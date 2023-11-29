@@ -1,8 +1,8 @@
-import React,{useRef, useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react'
 import { SpecificationCars ,colors,ImagesSlides} from '../assets/DataComponents'
 
 // animation components 
-import { motion,ScrollMotionValues,useAnimation,stagger} from 'framer-motion';  
+import { motion,useAnimation} from 'framer-motion';  
 import { useInView } from 'react-intersection-observer';
 
 
@@ -277,8 +277,8 @@ export const LinesAnimation = ({element,classContainer}) => {
       animate={control} 
       className={`lines ${classContainer}`}
       ref={ref}
-     >
-      <div>{element}</div>
+     >{element}
+      <div></div>
      </motion.div>
     </>
   )

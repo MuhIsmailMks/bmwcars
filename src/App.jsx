@@ -1,6 +1,6 @@
  
-import React, {useEffect, useState ,useRef,Component } from 'react';
-import { Routes,Route ,NavLink , useLocation } from 'react-router-dom'; 
+import React, {useEffect, useState ,useRef } from 'react';
+import { HashRouter,Route ,NavLink,Routes  } from 'react-router-dom'; 
 
 import './App.css';
  
@@ -98,22 +98,22 @@ const FooterLinks = () => {
         <ul className={selected == 1  ? 'dropdown active' : 'dropdown'}> 
 
             <li>
-                <NavLink className='link' activeclassname='active' exact="true" to='/'>  
+                <NavLink className='link' activeclassname='active'  to='bmwCars/Home'>  
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className='link' activeclassname='active' to='/About'>
+              <NavLink className='link' activeclassname='active' to='bmwCars/About'>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink className='link' activeclassname='active' to='/Models'>
+              <NavLink className='link' activeclassname='active' to='bmwCars/Models'>
                 Models
               </NavLink>
             </li> 
             <li>
-              <NavLink className='link' activeclassname='active' to='/Contact'>
+              <NavLink className='link' activeclassname='active' to='bmwCars/Contact'>
                 Contact
               </NavLink>
             </li> 
@@ -157,11 +157,46 @@ const FooterLinks = () => {
     </>
   )
 }
- 
-function App() {  
-  // ambil dimensi untuk value 
 
-  // menu nav
+const FooterSection = () => {
+  return    <footer className='d-flex'>
+
+  <div className="footer_about-web d-flex">
+
+    <div className="logo">
+      <img src={logo} alt="Logo BMW" />
+    </div>
+
+    <div className="footer_about-web_content">
+
+        <div className="footer_about-web_text">
+          <p>This is a website that provides information related to BMW cars, and attracts your attention with these luxury cars, this is not an official website from BMW</p>
+        </div>
+
+       <div className='email-container'> 
+
+            <div className="email d-flex">
+                <div className="icon d-center"><img src={email} alt="" /></div>
+                 <input type="text" placeholder='Your Email' />
+            </div>
+
+            <div className="by"><p>©Muhammad_Ismail 2023</p></div>
+            
+       </div>
+
+    </div>
+  
+    <div className="line"></div>
+  </div>
+
+  <FooterLinks/>
+
+</footer>
+}
+
+const HeaderNavigation = () => {
+
+    // menu nav 
     const menuBtn = useRef(null); 
     const [menu,setMenu] = useState(false);
 
@@ -192,97 +227,67 @@ function App() {
         } 
   } 
 
-  const menuClick = () => {
-    setMenu(!menu);
-  } 
-  
- 
-  return (
-    <div className='container' > 
-
-      <nav className='d-flex'> 
-        <div className="logo d-center">
-          <img src={logo} alt="" />
-        </div>
+    const menuClick = () => {
+      setMenu(!menu);
+    } 
+    
 
 
+  return <header>
 
-        <ul onClick={ulClick}>
-                
-          <li>
-              <NavLink className='link' activeclassname='active' exact="true" to='/'>  Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className='link' activeclassname='active' to='/About'>
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className='link' activeclassname='active' to='/Models'>
-              Models
-            </NavLink>
-          </li> 
-          <li>
-            <NavLink className='link' activeclassname='active' to='/Contact'>
-              Contact
-            </NavLink>
-          </li> 
-        </ul>
+  <nav className='d-flex'> 
+      <div className="logo d-center">
+        <img src={logo} alt="" />
+      </div> 
+
+      <ul onClick={ulClick}>
+              
+        <li>
+            <NavLink className='link' activeclassname='active' to='bmwCars/Home'>  Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className='link' activeclassname='active' to='bmwCars/About'>
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className='link' activeclassname='active' to='bmwCars/Models'>
+            Models
+          </NavLink>
+        </li> 
+        <li>
+          <NavLink className='link' activeclassname='active' to='bmwCars/Contact'>
+            Contact
+          </NavLink>
+        </li> 
+      </ul>
 
 
-        <DarkMode/> 
-        <div className="menu d-center" id={!menu ? "" : "menu-active" } onClick={menuClick} ref={menuBtn}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-      </nav>
- 
-
-    <Routes>
-      <Route path='/' element={<Home/>}/> 
-      <Route path='/About' element={<About/>}/> 
-      <Route path='/Models' element={<Models/>}/>  
-      <Route path='/Contact' element={<Contact/>}/>  
-    </Routes>
-
-    <footer className='d-flex'>
-
-      <div className="footer_about-web d-flex">
-
-        <div className="logo">
-          <img src={logo} alt="Logo BMW" />
-        </div>
-
-        <div className="footer_about-web_content">
-
-            <div className="footer_about-web_text">
-              <p>This is a website that provides information related to BMW cars, and attracts your attention with these luxury cars, this is not an official website from BMW</p>
-            </div>
-
-           <div className='email-container'> 
-
-                <div className="email d-flex">
-                    <div className="icon d-center"><img src={email} alt="" /></div>
-                     <input type="text" placeholder='Your Email' />
-                </div>
-
-                <div className="by"><p>©Muhammad_Ismail 2023</p></div>
-                
-           </div>
-
-        </div>
-      
-        <div className="line"></div>
+      <DarkMode/> 
+      <div className="menu d-center" id={!menu ? "" : "menu-active" } onClick={menuClick} ref={menuBtn}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <FooterLinks/>
-
-    </footer>
-
-    
+    </nav>
+  </header>
+}
+ 
+function App() {    
+  return (
+    <div className='container' >  
+          <HeaderNavigation/>
+            <Routes>    
+                 <Route path='/' element={<Home/>}/>  
+                 <Route path='bmwCars/' element={<Home/>}/>  
+                 <Route path='bmwCars/Home' element={<Home/>}/> 
+                 <Route path='bmwCars/About' element={<About/>}/> 
+                 <Route path='bmwCars/Models' element={<Models/>}/>  
+                 <Route path='bmwCars/Contact' element={<Contact/>}/>    
+            </Routes>   
+          <FooterSection/>
     </div>
   );
 }
