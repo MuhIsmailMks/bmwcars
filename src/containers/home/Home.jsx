@@ -1,11 +1,10 @@
-import React ,{useRef,useState,useEffect} from 'react' 
+import React, {useState,useEffect} from 'react' 
 
 import './home.css'  
 
 // components
 import {SpecificationCar,ImagesSlider,ColorsCar, TextOpacityAnimation, ElementAnimation, AnimatedTextCharacter, LinesAnimation} from '../../components/HomeComponents'  
-
-import {DarkMode,darkActive}  from '../../App'
+ 
 // IMAGE
 // header
 import bgHeader from '../../images/bgHeader.png'
@@ -33,9 +32,11 @@ import interior from '../../images/interior.png'
 
 import dollar from '../../icons/dollarIcon.svg'
 import dollarDark from '../../icons/dollarIconDark.svg'
+
 // overview colors
 import carsColorDesktop from  '../../images/colorsImgDesktop.png'
 import carsColorMobile from  '../../images/colorsImgMobile.png'
+
 // overview final
 import overviewFinalImg from '../../images/overviewFinalImg.png'
 import overviewFinalPrice from '../../images/overviewFinalImgPrice.png'  

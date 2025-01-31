@@ -151,7 +151,7 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
         
         if(width >= 1600){
             return 6
-        } else if (width <= 1600 && width >= 1190 || width <= 1000 && width >= 500){
+        } else if ((width <= 1600 && width >= 1190) || (width <= 1000 && width >= 500)){
             return 5 // same with 4 card
         } else if (width <= 500){
             return 3
@@ -180,18 +180,24 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
 
     const showCar = () => { 
             setCarCount((prevCount) => prevCount + changeValueButton()); 
-            if(seriesCar.length === carCount + 1 || seriesCar.length === carCount || seriesCar.length === carCount + 2){  
+            if((seriesCar.length === carCount + 1) || (seriesCar.length === carCount) || (seriesCar.length === carCount + 2)){  
                 showButton.current.classList.add("showButton");
             }  
     }  
     
+    
     useEffect(() => {
-        if(seriesCar.length === carCount + 1 || seriesCar.length >= carCount  + 1  || seriesCar.length === carCount ){  
+        if (
+            (seriesCar.length === carCount + 1) || 
+            (seriesCar.length >= (carCount + 1))  || 
+            (seriesCar.length === carCount)
+        ) {  
             showButton.current.classList.remove("showButton");
         } else {
             showButton.current.classList.add("showButton");
         } 
-    },[])
+    }, [carCount, seriesCar.length]);  // ✅ Tambahkan dependensi
+    
  
     return(
         <div className="container-model-car">
@@ -207,7 +213,7 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
                        classContainer={`model-car ${i + 1 < carCount ? '' : 'none'}`}
                       element={
 
-                        <    >
+                        <>
 
                         <div className="image d-center">
                         <div className="vector">
@@ -258,7 +264,7 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
                             <button>View Car</button>
                         </div>
 
-                    </>
+                         </>
 
                       }
                     />
