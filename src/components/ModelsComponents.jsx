@@ -196,7 +196,7 @@ export const SeriesCarsComponents = ({seriesCar,title}) => {
         } else {
             showButton.current.classList.add("showButton");
         } 
-    }, [carCount, seriesCar.length]);  // ✅ Tambahkan dependensi
+    }, [carCount, seriesCar.length]);   
     
  
     return(
