@@ -1,6 +1,6 @@
  
 import React, {useEffect, useState ,useRef } from 'react';
-import { HashRouter,Route ,NavLink,Routes  } from 'react-router-dom'; 
+import { HashRouter as Router, Route ,NavLink,Routes  } from 'react-router-dom'; 
 
 import './App.css';
  
@@ -17,7 +17,6 @@ import email from './icons/emailIcon.svg'
 
 export let darkActive = true;
  
- 
 export const DarkMode = () => {
   const [dark, setDark] = useState(
     localStorage.getItem('darkModePreference') === 'true'
@@ -25,9 +24,9 @@ export const DarkMode = () => {
 
   const toggleDarkMode = () => {
     const newDarkValue = !dark;
-    darkActive = dark
+    darkActive = newDarkValue
     setDark(newDarkValue);
-    localStorage.setItem('darkModePreference', newDarkValue);
+    // localStorage.setItem('darkModePreference', newDarkValue);
   };
 
   useEffect(() => {
@@ -66,9 +65,9 @@ const FooterLinks = () => {
     const ClickBtn = (i) => () => {
       setSelected((prevSelected) => (prevSelected === i ? null : i)); 
     }
- 
-    // If you click on the routes links, it will return to the top of the screen
+  
    useEffect(() => {
+    
     const handleClick = () => {
       window.scrollTo(0,0);
     } 
@@ -84,7 +83,7 @@ const FooterLinks = () => {
       });
     } 
 
-   })
+   },[])
 
 
   return(
@@ -98,22 +97,22 @@ const FooterLinks = () => {
         <ul className={selected == 1  ? 'dropdown active' : 'dropdown'}> 
 
             <li>
-                <NavLink className='link' activeclassname='active'  to='bmwCars/Home'>  
+                <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')}  to='bmwCars/Home'>  
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className='link' activeclassname='active' to='bmwCars/About'>
+              <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/About'>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink className='link' activeclassname='active' to='bmwCars/Models'>
+              <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Models'>
                 Models
               </NavLink>
             </li> 
             <li>
-              <NavLink className='link' activeclassname='active' to='bmwCars/Contact'>
+              <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Contact'>
                 Contact
               </NavLink>
             </li> 
@@ -243,21 +242,21 @@ const HeaderNavigation = () => {
       <ul onClick={ulClick}>
               
         <li>
-            <NavLink className='link' activeclassname='active' to='bmwCars/Home'>  Home
+            <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Home'>  Home
           </NavLink>
         </li>
         <li>
-          <NavLink className='link' activeclassname='active' to='bmwCars/About'>
+          <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/About'>
             About
           </NavLink>
         </li>
         <li>
-          <NavLink className='link' activeclassname='active' to='bmwCars/Models'>
+          <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Models'>
             Models
           </NavLink>
         </li> 
         <li>
-          <NavLink className='link' activeclassname='active' to='bmwCars/Contact'>
+          <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Contact'>
             Contact
           </NavLink>
         </li> 
