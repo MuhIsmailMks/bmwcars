@@ -294,7 +294,7 @@
   overflow: hidden;
 }
 
-.num_country h1{
+.num_country h4{
   font-weight: 700;
   font-family: var(--font-lato);
   font-size: 26.875rem;
@@ -958,7 +958,7 @@ body.dark .container_about .slide-limits{
     .num_country{
       height: 300px;
     }
-    .num_country h1{ 
+    .num_country h4{ 
       font-size: 24rem;
     }
 
@@ -1113,7 +1113,7 @@ body.dark .container_about .slide-limits{
     }
 
     /* background num country */
-    .num_country h1{
+    .num_country h4{
       font-size: 22rem;
     } 
 
@@ -1349,12 +1349,9 @@ body.dark .container_about .slide-limits{
       max-width: 100%;
      }
 
-     .num_country h1{
+     .num_country h4{
       font-size: 35vw;
      }
-
-
-
 
      /* awards */   
      .num-awards p:not(.num-award p){ 
@@ -1674,7 +1671,7 @@ body.dark .container_about .slide-limits{
   }
  
 
-  .num_country h1{
+  .num_country h4{
     font-size: 50vi;  
   }
 
@@ -1912,7 +1909,7 @@ body.dark .container_about .slide-limits{
   .num_country{
     height: auto;
   }
-  .num_country h1{ 
+  .num_country h4{ 
     background-size: contain;
     margin: 0;
   }

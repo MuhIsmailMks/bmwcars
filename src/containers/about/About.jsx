@@ -119,7 +119,7 @@ function About() {
 
           <div className="service_country">
             <div className="num_country d-center">
-              <ElementAnimation delay={0.8} element={<h1>45</h1>} />
+              <ElementAnimation delay={0.8} element={<h4>45</h4>} />
             </div>
             <ElementAnimation
               startPositionX={-40}
