@@ -3,8 +3,11 @@ import React, {useState,useEffect} from 'react'
 import './home.css'  
 
 // components
-import {SpecificationCar,ImagesSlider,ColorsCar, TextOpacityAnimation, ElementAnimation, AnimatedTextCharacter, LinesAnimation} from '../../components/HomeComponents'  
- 
+import {SpecificationCar,ImagesSlider,ColorsCar} from '../../components/HomeComponents'  
+
+// animation
+import {ElementAnimation, AnimatedTextCharacter,TextOpacityAnimation ,LinesAnimation} from '../../components/AnimationComponents'
+
 // IMAGE
 // header
 import bgHeader from '../../images/bgHeader.png'
@@ -177,7 +180,8 @@ function Home() {
         </section>
 
           <div className="about-car_btn">
-            <ElementAnimation element={  <button className='d-center'>Read More</button>} startPositionX={-90} delay={1.1}/>
+
+            <ElementAnimation element={  <button className='d-center'>Read More</button>} startPositionX={-90} delay={1.1}/> 
 
           </div>
 
@@ -457,5 +461,5 @@ function Home() {
     </div>
   )
 }
-// link imagesSlide https://codesandbox.io/p/sandbox/k3cyyc?file=%2Fsrc%2FApp.jsx%3A1%2C1 || https://swiperjs.com/demos#pagination-fraction
+
 export default Home

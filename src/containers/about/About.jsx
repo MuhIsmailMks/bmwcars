@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./about.css";
-
+ 
 import {
   AnimatedTextCharacter,
   LinesAnimation,
   CostumLinesAnimation,
   ElementAnimation,
-} from "../../components/HomeComponents";
+} from "../../components/AnimationComponents";
 
 import {
   HeroImagesSlide,
@@ -58,7 +58,6 @@ function About() {
 
   return (
     <div className="container_about">
-
       <div className="hero">
         <div className="hero-content d-flex">
           <h2>
@@ -75,7 +74,15 @@ function About() {
                 provide better service and continuously improve your experience
                 with us
               </p>
-            } />
+            }
+          />
+
+          {/* <p>
+                We continue to innovate and adapt to the latest technological
+                developments in the automotive industry. In this way, we can
+                provide better service and continuously improve your experience
+                with us
+              </p> */}
 
           <ElementAnimation
             classContainer={"button d-center"}
@@ -86,6 +93,10 @@ function About() {
               </button>
             }
           />
+
+          {/* <button className="d-center">
+                <span>Contact Us</span>
+              </button> */}
         </div>
 
         <HeroImagesSlide />
@@ -112,6 +123,7 @@ function About() {
               startPositionX={-20}
               element={<h5>Information for customers</h5>}
             />
+
             <div className="text_information">
               <TextInformationComponent />
             </div>
@@ -121,17 +133,18 @@ function About() {
             <div className="num_country d-center">
               <ElementAnimation delay={0.8} element={<h4>45</h4>} />
             </div>
+
             <ElementAnimation
               startPositionX={-40}
               delay={0.8}
               element={<h3>already available in several countries</h3>}
             />
+
             <ElementAnimation
               startPositionX={-40}
               delay={1.2}
               element={
                 <p>
-                  {" "}
                   Every vehicle that has joined brings a new dimension to our
                   community, bringing unique knowledge and interesting stories.
                   Together, we create a network that enables the irreplaceable
@@ -193,56 +206,50 @@ function About() {
       <div className="awards">
         <h2 className="award-title d-flex">
           <LinesAnimation />
-          <AnimatedTextCharacter text={"Awards"} delay={1.1}/>
+          <AnimatedTextCharacter text={"Awards"} delay={1.1} />
         </h2>
 
         <div className="awards-container d-flex">
           <div className="num-awards ">
-
             <div className="award-description">
-              <ElementAnimation 
+              <ElementAnimation
                 element={<h4>several awards</h4>}
                 startPositionX={-100}
-                delay={.2}
+                delay={0.2}
               />
 
-              <ElementAnimation 
-                element={<p>
-              
-                  We have received several awards on our website, and have been
-                  recognized in several organizations. Don't hesitate to get
-                  information about BMW cars on our website because the
-                  information is accurate and updated.
-                </p>}
+              <ElementAnimation
+                element={
+                  <p>
+                    We have received several awards on our website, and have
+                    been recognized in several organizations. Don't hesitate to
+                    get information about BMW cars on our website because the
+                    information is accurate and updated.
+                  </p>
+                }
                 startPositionX={-100}
                 delay={1.1}
               />
-             
             </div>
 
             <div className="category-num-awards d-flex">
-
-              {
-                [
-                  {numAward:12,typeAward:'Best Information'},
-                  {numAward:4,typeAward:'Best Reviews'},
-                  {numAward:7,typeAward:'Technology Accuracy'},
-                ].map(({numAward,typeAward},i) => ( 
-                  <ElementAnimation
-                    key={i}
-                    classContainer={"num-award d-center"}
-                    element={
-                      <  >
-                        <h5>{numAward}</h5>
-                        <p>{typeAward}</p>
-                      </>
-                    }
-                    delay={1.2 + i / 2}
-                  />
-                ))
-              }
-
-
+              {[
+                { numAward: 12, typeAward: "Best Information" },
+                { numAward: 4, typeAward: "Best Reviews" },
+                { numAward: 7, typeAward: "Technology Accuracy" },
+              ].map(({ numAward, typeAward }, i) => (
+                <ElementAnimation
+                  key={i}
+                  classContainer={"num-award d-center"}
+                  element={
+                    <>
+                      <h5>{numAward}</h5>
+                      <p>{typeAward}</p>
+                    </>
+                  }
+                  delay={1.2 + i / 2}
+                />
+              ))}
             </div>
           </div>
 
@@ -263,8 +270,6 @@ function About() {
           <Testimonials />
         </div>
       </div>
- 
-
     </div>
   );
 }

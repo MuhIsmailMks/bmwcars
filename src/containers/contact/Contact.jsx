@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+
+ 
 import {
-  AnimatedTextCharacter,
+  AnimatedTextCharacter, 
   CostumLinesAnimation,
   ElementAnimation,
-} from "../../components/HomeComponents";
-import { frequentlyAsked } from "../../assets/DataComponents";
+} from "../../components/AnimationComponents";
 
+
+import { frequentlyAsked } from "../../assets/DataComponents";
 import "./contact.css";
 
 // images

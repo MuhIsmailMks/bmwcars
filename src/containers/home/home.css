@@ -1,8 +1,5 @@
- 
-
-
-  .price_car h2 .container-text-animation,
-  .express_colors h2 .container-text-animation{ 
+.price_car h2 .container-text-animation,
+.express_colors h2 .container-text-animation{ 
       margin: 0;
   }
 
@@ -654,12 +651,6 @@ body.dark .gradient_main-car{
 .swiper-slide.slide-img.swiper-slide-visible.swiper-slide-thumb-active img{
    opacity: 1;
 }
-
-
-
-
-
-
 
 
 /* overview */

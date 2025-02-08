@@ -14,7 +14,8 @@ import 'swiper/css/effect-fade';
 import { motion ,useAnimation} from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer';
 
-import { ElementAnimation } from './HomeComponents';
+// import { ElementAnimation } from './HomeComponents';
+import { ElementAnimation } from './AnimationComponents';
 
 // data
 import { AwardsCategory, TestimonialsClient, advantagesProduct,textInformation } from '../assets/DataComponents'; 
@@ -234,8 +235,7 @@ export function WebAwards(){
 
             </div> 
         </>
-       }
-    />
+       } /> 
     ))}
  
     </>
@@ -245,14 +245,11 @@ export function WebAwards(){
 export function Testimonials(){
   return(
       <> 
-           <Swiper
-          //  slidesPerView={1}
-          //  slidesPerGroup={1} 
+           <Swiper 
            centeredSlides={true}
            pagination={{  clickable: true}}
            navigation={true}
-           breakpoints={{
-            // when window width is >=
+           breakpoints={{ 
             10: { 
                slidesPerView : 1,
                centeredSlides :true,

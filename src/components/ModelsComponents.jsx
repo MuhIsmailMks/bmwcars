@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from 'framer-motion';  
 
 // components animation
-import { ElementAnimation } from '../components/HomeComponents';
+import { ElementAnimation } from '../components/AnimationComponents';
 
 // data components
 import { ModelheroImage,DriveModes} from '../assets/DataComponents'

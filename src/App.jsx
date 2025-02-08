@@ -1,295 +1,207 @@
- 
-import React, {useEffect, useState ,useRef } from 'react';
-import { HashRouter as Router, Route ,NavLink,Routes  } from 'react-router-dom'; 
+import React, { useState, useEffect, useRef } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Routes,
+} from "react-router-dom";
 
-import './App.css';
- 
-// link pages
-import Home from './containers/home/Home';
-import Contact from './containers/contact/Contact'; 
-import Models from './containers/modelscars/Models';
-import About from './containers/about/About';
+import "./App.css";
+
+// section components
+import Home from "./containers/home/Home";
+import About from "./containers/about/About";
+import Models from "./containers/modelscars/Models";
+import Contact from "./containers/contact/Contact";
+
+// utils
+import FooterSection from "./components/Footer";
 
 // image
 import logo from './images/logoWeb.png'
 import darkMode from "./icons/darkmode.png"
 import email from './icons/emailIcon.svg'
 
-export let darkActive = true;
- 
+// navbar
 export const DarkMode = () => {
   const [dark, setDark] = useState(
-    localStorage.getItem('darkModePreference') === 'true'
+    localStorage.getItem("darkModePreference") === "true"
   );
 
   const toggleDarkMode = () => {
-    const newDarkValue = !dark;
-    darkActive = newDarkValue
-    setDark(newDarkValue);
-    // localStorage.setItem('darkModePreference', newDarkValue);
+    setDark((prevDark) => {
+      const newDark = !prevDark;
+      localStorage.setItem("darkModePreference", newDark);
+      return newDark;
+    });
   };
 
   useEffect(() => {
-    const body = document.body;
-    if (dark) {
-      body.classList.add('dark');
-    } else {
-      body.classList.remove('dark');
-    }
+    document.body.classList.toggle("dark", dark);
   }, [dark]);
 
-  useEffect(() => { 
-    if (localStorage.getItem('darkModePreference') === 'true') {
-      setDark(true); 
-      darkActive = true
-    }
-  }, []);
- 
   return (
-    <>
-      <div className="mode d-center">
-        <img
-          src={darkMode}
-          alt=""
-          onClick={toggleDarkMode}
-        />
-      </div>
-    </>
+    <div className="mode d-center">
+      <img src={darkMode} alt="Toggle Dark Mode" onClick={toggleDarkMode} />
+    </div>
   );
+};
 
-}; 
+const HeaderNavigation = () => {
+  // menu nav
+  const menuBtn = useRef(null);
+  const [menu, setMenu] = useState(false);
 
-const FooterLinks = () => { 
-    const [selected, setSelected] = useState(null);
-  
-    const ClickBtn = (i) => () => {
-      setSelected((prevSelected) => (prevSelected === i ? null : i)); 
+  // when scroll will give to value
+  const [ScrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    if (ScrollY > 100) {
+      setMenu(false);
     }
-  
-   useEffect(() => {
-    
-    const handleClick = () => {
-      window.scrollTo(0,0);
-    } 
 
-    const routeslinks = document.querySelectorAll('.link');
-    routeslinks.forEach(link => {
-      link.addEventListener('click', handleClick);
-    });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [ScrollY]);
 
-    return() =>{
-      routeslinks.forEach(link => {
-        link.removeEventListener('click', handleClick);
-      });
-    } 
+  // menu click
+  const ulClick = (e) => {
+    let targ = e.target;
+    if (targ.className === "link") {
+      menuBtn.current.id = "";
+      setMenu(!menu);
+    }
+  };
 
-   },[])
+  const menuClick = () => {
+    setMenu(!menu);
+  };
 
+  return (
+    <header>
+      <nav className="d-flex">
+        <div className="logo d-center">
+          <img src={logo} alt="logo" />
+        </div>
 
-  return(
-    <>
-    <div className="footer_links d-flex">
+        <ul onClick={ulClick}>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active link" : "link")}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active link" : "link")}
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/models"
+              className={({ isActive }) => (isActive ? "active link" : "link")}
+            >
+              Models
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active link" : "link")}
+            >
+              Contact
+            </NavLink>
+          </li>
+        </ul>
 
-      <div className="links">
-        <h3 className='dropdown-btn' onClick={ClickBtn(1)}>Links</h3>
+        <DarkMode/>
 
-        {/* router */}
-        <ul className={selected == 1  ? 'dropdown active' : 'dropdown'}> 
+        <div
+          className="menu d-center"
+          id={!menu ? "" : "menu-active"}
+          onClick={menuClick}
+          ref={menuBtn}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+  );
+};
 
+const App = () => {
+  return (
+    <div className="container">
+      <Router>
+        {/* <nav>
+          <ul>
             <li>
-                <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')}  to='bmwCars/Home'>  
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "active link" : "link"
+                }
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/About'>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "active link" : "link"
+                }
+              >
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Models'>
+              <NavLink
+                to="/models"
+                className={({ isActive }) =>
+                  isActive ? "active link" : "link"
+                }
+              >
                 Models
               </NavLink>
-            </li> 
+            </li>
             <li>
-              <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Contact'>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "active link" : "link"
+                }
+              >
                 Contact
               </NavLink>
-            </li> 
+            </li>
+          </ul>
+        </nav> */}
+        <HeaderNavigation/>
 
-        </ul>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/models" element={<Models />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
-
-      </div>
-
-      <div className="information">
-        <h3 className='dropdown-btn' onClick={ClickBtn(2)}>Information</h3>
-        <ul className={selected == 2  ? 'dropdown active' : 'dropdown'}> 
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Cookies</a></li>
-          <li><a href="#">privacy & policy</a></li>
-        </ul>
-      </div>
-
-      <div className="about">
-        <h3 className='dropdown-btn' onClick={ClickBtn(3)}>about</h3>
-        <ul className={selected == 3  ? 'dropdown active' : 'dropdown'}> 
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
-      </div>
-
-      <div className="social_media">
-        <h3 className='dropdown-btn' onClick={ClickBtn(4)}>Follow Us</h3>
-        <ul className={selected == 4  ? 'dropdown active' : 'dropdown'}>
-          <li className='d-center'><a href="#"></a></li>
-          <li className='d-center'><a href="#"></a></li>
-          <li className='d-center'><a href="https://www.linkedin.com/in/muh-ismail-mks/"></a></li>
-          <li className='d-center'><a href="#"></a></li>
-        </ul>
-      </div>
-
-  </div>
-    </>
-  )
-}
-
-const FooterSection = () => {
-  return    <footer className='d-flex'>
-
-  <div className="footer_about-web d-flex">
-
-    <div className="logo">
-      <img src={logo} alt="Logo BMW" />
-    </div>
-
-    <div className="footer_about-web_content">
-
-        <div className="footer_about-web_text">
-          <p>This is a website that provides information related to BMW cars, and attracts your attention with these luxury cars, this is not an official website from BMW</p>
-        </div>
-
-       <div className='email-container'> 
-
-            <div className="email d-flex">
-                <div className="icon d-center"><img src={email} alt="" /></div>
-                 <input type="text" placeholder='Your Email' />
-            </div>
-
-            <div className="by"><p>©Muhammad_Ismail 2023</p></div>
-            
-       </div>
-
-    </div>
-  
-    <div className="line"></div>
-  </div>
-
-  <FooterLinks/>
-
-</footer>
-}
-
-const HeaderNavigation = () => {
-
-    // menu nav 
-    const menuBtn = useRef(null); 
-    const [menu,setMenu] = useState(false);
-
-    // when scroll will give to value
-    const [ScrollY, setScrollY] = useState(0);
-    useEffect(() => { 
-      const handleScroll = () => {
-        setScrollY(window.scrollY);  
-      }; 
-      window.addEventListener('scroll', handleScroll);
-   
-     if(ScrollY > 100){
-      setMenu(false) 
-     }
-
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, [ScrollY]);  
-  
- 
-    // menu click
-    const ulClick = (e) => {
-        let targ = e.target 
-        if(targ.className === 'link'){
-          menuBtn.current.id = '' 
-          setMenu(!menu)  
-        } 
-  } 
-
-    const menuClick = () => {
-      setMenu(!menu);
-    } 
-    
-
-
-  return <header>
-
-  <nav className='d-flex'> 
-      <div className="logo d-center">
-        <img src={logo} alt="" />
-      </div> 
-
-      <ul onClick={ulClick}>
-              
-        <li>
-            <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Home'>  Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/About'>
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Models'>
-            Models
-          </NavLink>
-        </li> 
-        <li>
-          <NavLink  className={({ isActive }) => (isActive ? 'active link' : 'link')} to='bmwCars/Contact'>
-            Contact
-          </NavLink>
-        </li> 
-      </ul>
-
-
-      <DarkMode/> 
-      <div className="menu d-center" id={!menu ? "" : "menu-active" } onClick={menuClick} ref={menuBtn}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-    </nav>
-  </header>
-}
- 
-function App() {    
-  return (
-    <div className='container' >  
-          <HeaderNavigation/>
-            <Routes>    
-                 <Route path='/' element={<Home/>}/>  
-                 <Route path='bmwCars/' element={<Home/>}/>  
-                 <Route path='bmwCars/Home' element={<Home/>}/> 
-                 <Route path='bmwCars/About' element={<About/>}/> 
-                 <Route path='bmwCars/Models' element={<Models/>}/>  
-                 <Route path='bmwCars/Contact' element={<Contact/>}/>    
-            </Routes>   
-          <FooterSection/>
+        <FooterSection />
+      </Router>
     </div>
   );
-}
+};
 
-export default App
-
+export default App;

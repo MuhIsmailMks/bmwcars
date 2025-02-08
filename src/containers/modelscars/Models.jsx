@@ -2,13 +2,15 @@ import React  from "react";
 import "./models.css";
  
 import "swiper/css/effect-fade";
-// components
+
+
+// components 
 import {
   AnimatedTextCharacter,
+  LinesAnimation,
   TextOpacityAnimation,
   ElementAnimation,
-  LinesAnimation,
-} from "../../components/HomeComponents";
+} from "../../components/AnimationComponents";
 
 import {
   SeriesModelCars,
@@ -66,8 +68,11 @@ function Models() {
             </button>
           }
           />
-
-
+          
+          {/* <button className="view-btn d-center">
+              <span></span>
+              <p>View More</p>
+            </button> */}
 
           <div className="support-by d-flex">
             <ElementAnimation
@@ -112,12 +117,13 @@ function Models() {
             </h2>
           </div>
 
-          <ElementAnimation
+           <ElementAnimation
           startPositionX={-70}
              element={
                <h3>many model choices</h3> 
              }
-          />
+          />  
+
         </div>
 
         <div className="style-cars-content d-flex">
@@ -125,7 +131,7 @@ function Models() {
           <div className="col _1">
             <section>
 
-              <ElementAnimation
+               <ElementAnimation
                 delay={1}
                 startPositionX={-70}
                 element={ 
@@ -136,18 +142,21 @@ function Models() {
                     genders.
                   </p>
                 }
-              />
+              />  
+
+                  
 
               <div className="driving-mode">
                 <div className="driving-mode-title">
                   
-                <ElementAnimation
+               <ElementAnimation
                 delay={1}
                 startPositionX={-70}
                 element={ 
                    <h4>Several driving modes are available</h4>
                   }
-                /> 
+                />   
+                 
 
                 </div>
 
