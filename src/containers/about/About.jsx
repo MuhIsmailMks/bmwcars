@@ -106,7 +106,7 @@ function About() {
         <div className="title d-flex">
           <LinesAnimation />
           <h2>
-            <AnimatedTextCharacter text={"Visi & Misi"} delay={0.9} />
+            <AnimatedTextCharacter text={"vision & mission "} delay={0.9} />
           </h2>
         </div>
 

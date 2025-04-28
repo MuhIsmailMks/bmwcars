@@ -1485,6 +1485,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     /* main-car */
     .container_home .main-car{ 
         height: 750px;
+        margin-bottom: 2rem;
     }
 
     /* images */ 
@@ -1785,8 +1786,9 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 @media screen and (max-width:900px){ 
     /* main-car */
     .container_home .main-car{
-        height: 70vw;
+        height: 60vw;
     }
+
     .main-car-content{
         padding-top: 3rem;
     }
@@ -2581,7 +2583,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 
 @media screen and (max-width:430px){ 
     .container_home .main-car{
-        /* height: 500px; */
+        height: auto;
         margin-bottom: 1rem;
     }
 
