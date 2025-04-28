@@ -417,18 +417,20 @@ body.dark .gradient_main-car{
 .specification_cars-container  .specification_content .icon::before{
     content: "";
     position: absolute;
-    transition: all .4s ease-in-out; 
+    transition: all .4s ease-in-out;
     left: 50%;
-    top: 50%; 
+    top: 50%;
     transform: translate(-30%,-50%);
-
     width: 100px;
-    height: auto; 
-
+    height: auto;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    z-index: 1; 
+    z-index: 1;
+    -webkit-transform: translate(-30%,-50%);
+    -moz-transform: translate(-30%,-50%);
+    -ms-transform: translate(-30%,-50%);
+    -o-transform: translate(-30%,-50%);
 }
 
 
@@ -2579,8 +2581,10 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 
 @media screen and (max-width:430px){ 
     .container_home .main-car{
-        height: 500px;
+        /* height: 500px; */
+        margin-bottom: 1rem;
     }
+
     /* about car */
     .about-car_images {
         width: 100%;
