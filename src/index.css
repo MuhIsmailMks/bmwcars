@@ -2,6 +2,15 @@
   navigation: auto;
 }
 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none; 
+}
+
+
 /* body */
 body {
   height: auto;
