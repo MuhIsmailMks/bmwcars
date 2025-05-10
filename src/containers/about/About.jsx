@@ -17,7 +17,6 @@ import {
   Testimonials,
 } from "../../components/AboutComponents";
 
-// swiper
 
 // image
 import world from "../../images/world.png";
@@ -76,13 +75,7 @@ function About() {
               </p>
             }
           />
-
-          {/* <p>
-                We continue to innovate and adapt to the latest technological
-                developments in the automotive industry. In this way, we can
-                provide better service and continuously improve your experience
-                with us
-              </p> */}
+ 
 
           <ElementAnimation
             classContainer={"button d-center"}
