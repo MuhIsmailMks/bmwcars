@@ -1,10 +1,7 @@
 :root{
   --font-prompt: 'Prompt', sans-serif;
   --font-inter: 'Inter', sans-serif;
-  --font-lato: 'Lato', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
-  --font-mont: 'Montserrat', sans-serif;
-  --font-montSubrayada:  'Montserrat Subrayada', sans-serif;
+  --font-lato: 'Lato', sans-serif;  
   
   --dark-mode: #0f0f0f;
   --dark-mode-bg:#202020;
@@ -13,9 +10,7 @@
   --dark-mode-text:#dddddd;
   --dark-mode-Titletext:#eeeeee;
   --text-primary-clr:#5F5F5F;
-  --light-mode-text:rgb(20, 20, 20);
-
-  --primary-color:#4D5BFF;
+  --light-mode-text:rgb(20, 20, 20); 
 }
  
 
@@ -26,9 +21,6 @@
 
     max-width: 100%;
 }
-
-
-
 
 
 /* .hero */
@@ -131,7 +123,7 @@
 
 .container_about .hero p{
   font-size: 1.063rem;
-  font-family:  var(--font-poppins);
+  font-family:  var(--font-prompt);
   font-weight: 300; 
   
   width: 517px;
@@ -205,7 +197,8 @@
 }
 
 .visi_misi .about-visi{
-  font-family: var(--font-mont);
+  font-family: var(--font-lato);
+  font-weight: 800;
   position: relative;
 
   width: 860px;  
@@ -255,7 +248,7 @@
 
 .information h5{
   color: var(--primary-color);
-  font-family: var(--font-poppins);
+  font-family: var(--font-inter);
   font-weight: 500;
   font-size: 1.563rem;
 
@@ -407,7 +400,7 @@
 .advantage h4{
   font-size: 1.375rem;
   font-weight: 700;
-  font-family: var(--font-mont);
+  font-family: var(--font-inter);
   line-height: 26.82px; 
   width: 100%;
   text-align: center;
@@ -496,7 +489,7 @@
   width: 100%;
   height: auto;
 
-  font-family: var(--font-mont);
+  font-family: var(--font-lato);
   font-weight: 500;
   font-size: 2.813rem;
 
@@ -629,7 +622,7 @@
 }
 
 .about-award h4{
-  font-family: var(--font-mont);
+  font-family: var(--font-inter);
   font-weight: 500;
   font-size: 0.875rem; 
   color: var(--primary-color);
@@ -684,7 +677,7 @@
 
 .testimoni-title h2{
   font-weight: 500;
-  font-family: var(--font-mont);
+  font-family: var(--font-lato);
   font-size: 2.5rem;
 }
 
@@ -770,7 +763,7 @@
   text-align: center;
   
   font-weight: 500;
-  font-family: var(--font-mont);
+  font-family: var(--font-inter);
   font-size: 1.25rem; 
 }
 
@@ -780,8 +773,10 @@
 }
 
 .testimoni p{
-  font-family: var(--font-mont);
-  font-weight: 400;
+  font-family: var(--font-inter);
+  opacity: .8;
+  line-height: 1.4;
+  font-weight: 300;
   font-size: 1rem;
   text-align: center;
   width: 257px;

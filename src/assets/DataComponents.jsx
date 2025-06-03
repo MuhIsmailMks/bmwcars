@@ -5,7 +5,6 @@ import fuelIcon from '../icons/fuelIcon.svg'
 import typeIcon from '../icons/typesIcon.svg' 
 import materialIcon from '../icons/materialIcon.svg' 
 
-
 import qualityIcon from '../icons/qualityIcon.svg' 
 import securityIcon from '../icons/securityIcon.svg' 
 import performanceIcon from '../icons/performanceIcon.svg' 
@@ -13,17 +12,17 @@ import innovationIcon from '../icons/innovationIcon.svg'
 import posotiveIcon from '../icons/positiveIcon.svg' 
 import comfortIcon from '../icons/comfortIcon.svg' 
 
-
 import sportMode from '../icons/sportMode.svg' 
 import ecoMode from '../icons/ecoMode.svg' 
-import comfortMode from '../icons/comfortMode.svg' 
+import comfortMode from '../icons/comfortMode.svg'
+
 // images
-import bmw1 from '../images/bmw1.png'
-import bmw2 from '../images/bmw2.png'
-import bmw3 from '../images/bmw3.png'
-import bmw4 from '../images/bmw4.png'
-import bmw5 from '../images/bmw5.png'
-import bmw6 from '../images/bmw6.png'
+import bmw1 from '../images/bmw1.webp'
+import bmw2 from '../images/bmw2.webp'
+import bmw3 from '../images/bmw3.webp'
+import bmw4 from '../images/bmw4.webp'
+import bmw5 from '../images/bmw5.webp'
+import bmw6 from '../images/bmw6.webp'
 import bmw7 from '../images/bmw7.jpg'
 import bmw8 from '../images/bmw8.jpg'
 import bmw9 from '../images/bmw9.jpg'

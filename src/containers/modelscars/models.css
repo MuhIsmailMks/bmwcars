@@ -1,22 +1,4 @@
-:root{
-  --font-prompt: 'Prompt', sans-serif;
-  --font-inter: 'Inter', sans-serif;
-  --font-lato: 'Lato', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
-  --font-mont: 'Montserrat', sans-serif;
-  --font-montSubrayada:  'Montserrat Subrayada', sans-serif;
-  
-  --dark-mode-bg:#202020;
-  --light-mode-bg:#F1F1F1;
-
-  --dark-mode-text:#dddddd;
-  --text-primary-clr:#5F5F5F;
-  --light-mode-text:rgb(20, 20, 20);
-
-  --primary-color:#4D5BFF;
-}
-  
-
+ 
 .container_models{
     min-height: 200vh;
     height: auto; 
@@ -24,9 +6,6 @@
 
     max-width: 100%;
 }
-
-
-
 
 /* hero */
 .container_models .hero{
@@ -65,7 +44,7 @@
 }
 
 .container_models .content-hero p:not(button p){
-  font-family: var(--font-poppins);
+  font-family: var(--font-inter);
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 27px;
@@ -293,7 +272,7 @@
   font-family: var(--font-inter);
   font-size: 1.5625rem;
   font-weight: 300;
-  letter-spacing: 0.46094rem;
+  letter-spacing: 0.26094rem;
 
   margin: 1rem 0 0;
 }
@@ -337,7 +316,7 @@
   top: 0;
   width: 535px;
   max-width: 100%;
-  position: relative;
+  position: relative; 
 }
 
 .driving-mode{
@@ -352,7 +331,7 @@
 }
 
 .driving-mode-title h4{
-  font-family: var(--font-poppins);
+  font-family: var(--font-inter);
   font-weight: 400;
   font-size: 1.25rem;
   color: black;
@@ -507,7 +486,7 @@
 }
 
 .models-cars-title h2{
-  font-family: var(--font-montSubrayada);
+  font-family: var(--font-lato);
   font-weight: 400;
   font-size: 3.125rem;
 
@@ -523,7 +502,7 @@
 }
 
 .container-model-car h2{
-  font-family: var(--font-mont);
+  font-family: var(--font-inter);
   font-weight: 500;
   font-size: 2.25rem;
 
@@ -550,7 +529,7 @@
 
   font-size: 1.188rem;
   font-weight: 600;
-  font-family: var(--font-mont);
+  font-family: var(--font-inter);
 }
 
 .container-model-car .show-more-btn img{
@@ -595,7 +574,7 @@
 
 .model-car p{
   font-size: 11px;
-  font-family: var(--font-poppins);
+  font-family: var(--font-inter);
 }
 
 /* image model car */
@@ -673,7 +652,7 @@
 .models-container .model-car .type-car > *{
   width: 50%;  
   height: 17px;
-  font-family: var(--font-mont);
+  font-family: var(--font-lato);
    
   display: flex;
   align-items: center;
@@ -706,7 +685,7 @@
   align-items: center;
   margin: 3px 0; 
 
-  font-family: var(--font-poppins);
+  font-family: var(--font-inter);
 }
 
 .model-car .content .spec-car > div h5{
@@ -727,7 +706,7 @@
   text-align: center;
   line-height: 12.7px;
   font-weight: 400;
-  font-family: var(--font-poppins);
+  font-family: var(--font-inter);
   font-size: 0.688rem;
 }
 
@@ -748,7 +727,7 @@
   background-color: var(--primary-color);
   color: white;
   font-weight: 600;
-  font-family: var(--font-poppins);
+  font-family: var(--font-inter);
   font-size: 0.75rem;
   cursor: pointer;
 

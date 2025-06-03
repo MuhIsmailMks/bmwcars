@@ -145,7 +145,7 @@ body.dark .gradient_main-car{
     display: flex;
     flex-direction: column;
 
-    font-family: var(--font-poppins);
+    font-family: var(--font-prompt);
     padding-top: 3rem;
     gap: 3rem;
 }
@@ -244,7 +244,7 @@ body.dark .gradient_main-car{
 }
 
 .about-car_btn button{
-    font-family: var(--font-poppins);
+    font-family: var(--font-inter);
     background-color: var(--primary-color);
     color: rgb(255, 255, 255);
     font-size: 1.125rem;
@@ -383,7 +383,7 @@ body.dark .gradient_main-car{
 .specification_title-content h2{
     font-size: 1.313rem; 
     margin: 1rem 0 0;
-    font-family: var(--font-poppins);
+    font-family: var(--font-inter);
  
 }
 
@@ -521,7 +521,7 @@ body.dark .gradient_main-car{
 }
 
 .images-title h2{
-    font-family: var(--font-poppins);
+    font-family: var(--font-inter);
     color: white;
     font-size: 2.5rem;
     position: relative; 
@@ -913,7 +913,7 @@ body.dark .gradient_main-car{
 .colors-choises h3{
     text-align: center;
     font-weight: 800;
-    font-family: var(--font-mont);
+    font-family: var(--font-lato);
     font-size: 1.188rem;
 }
 

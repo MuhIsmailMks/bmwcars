@@ -81,7 +81,7 @@ const FooterLinks = () => {
       </div>
 
       <div className="about">
-        <h3 className='dropdown-btn' onClick={ClickBtn(3)}>about</h3>
+        <h3 className='dropdown-btn' onClick={ClickBtn(3)}>About</h3>
         <ul className={selected == 3  ? 'dropdown active' : 'dropdown'}> 
           <li><a href="#">FAQ</a></li>
           <li><a href="#">Company</a></li>

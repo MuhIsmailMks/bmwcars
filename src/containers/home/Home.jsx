@@ -10,35 +10,36 @@ import {ElementAnimation, AnimatedTextCharacter,TextOpacityAnimation ,LinesAnima
 
 // IMAGE
 // header
-import bgHeader from '../../images/bgHeader.png'
-import tabHeaderImage from '../../images/TabHeaderImage.png' 
-import dekstopHeaderImage from '../../images/dekstopHeaderImage.png' 
-import mobileHeaderImage from '../../images/mobileHeaderImage.png'  
-import smallMobileHeaderImage from '../../images/smallmobileHeaderImage.png' 
+import bgHeader from '../../images/bgHeader.webp'
+import tabHeaderImage from '../../images/TabHeaderImage.webp' 
+import dekstopHeaderImage from '../../images/dekstopHeaderImage.webp' 
+import mobileHeaderImage from '../../images/mobileHeaderImage.webp'  
+import smallMobileHeaderImage from '../../images/smallmobileHeaderImage.webp' 
  
 import luxuryIcon from '../../icons/luxuryIcon.png';
 import speedIcon from '../../icons/speedIcon.png';
-import sportIcon from '../../icons/sportIcon.png';  
-// about
-import aboutImgLeft from '../../images/aboutImgLeft.png'  
-import aboutImgCenter from '../../images/aboutImgCenter.png'  
-import aboutImgRight from '../../images/aboutImgRight.png'  
+import sportIcon from '../../icons/sportIcon.png'; 
+ 
+// about section image
+import aboutImgLeft from '../../images/aboutImgLeft.webp'  
+import aboutImgCenter from '../../images/aboutImgCenter.webp'  
+import aboutImgRight from '../../images/aboutImgRight.webp'  
 
 // overview
 import engine from '../../images/engine.png'
 import wheels from '../../images/wheels.png'
-import key from '../../images/keyOverview.png'
-import design from '../../images/design.png'
-import backlight from '../../images/backlight.png'
-import headlamp from '../../images/headlamp.png'
+import key from '../../images/keyOverview.webp'
+import design from '../../images/design.webp'
+import backlight from '../../images/backlight.webp'
+import headlamp from '../../images/headlamp.webp'
 import interior from '../../images/interior.png'
 
 import dollar from '../../icons/dollarIcon.svg'
 import dollarDark from '../../icons/dollarIconDark.svg'
 
 // overview colors
-import carsColorDesktop from  '../../images/colorsImgDesktop.png'
-import carsColorMobile from  '../../images/colorsImgMobile.png'
+import carsColorDesktop from  '../../images/colorsImgDesktop.webp'
+import carsColorMobile from  '../../images/colorsImgMobile.webp'
 
 // overview final
 import overviewFinalImg from '../../images/overviewFinalImg.png'

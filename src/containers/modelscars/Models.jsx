@@ -35,7 +35,7 @@ import video from "../../video/theNew3Series.mp4";
 function Models() {
  
   return (
-    <div className="container_models">
+    <section className="container_models">
       <div className="hero d-flex">
         
         {/* content hero  */}
@@ -245,7 +245,7 @@ function Models() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
