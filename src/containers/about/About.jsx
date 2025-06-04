@@ -152,7 +152,7 @@ function About() {
         </div>
 
         <div className="world_map d-center">
-          <img src={world} alt="" />
+          <img src={world} alt="world map image" />
         </div>
       </div>
 
@@ -187,7 +187,7 @@ function About() {
             />
           </div>
 
-          <img src={bgAdvan} alt="" />
+          <img src={bgAdvan} alt="advantages image" />
 
           <ElementAnimation
             startPositionX={-200}
@@ -254,9 +254,9 @@ function About() {
 
       <div className="testimonials">
         <div className="testimoni-title d-center">
-          <img src={quoteLeft} alt="" />
+          <img src={quoteLeft} alt="quote icon" />
           <h2>Testimonial</h2>
-          <img src={quoteRight} alt="" />
+          <img src={quoteRight} alt="quote icon" />
         </div>
 
         <div className="testimoni-container">

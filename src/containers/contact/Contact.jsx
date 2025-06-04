@@ -33,7 +33,7 @@ function Contact() {
     <div className="contact-container">
       <div className="hero d-center">
         <div className="hero-image">
-          <img src={heroImage} alt="" />
+          <img src={heroImage} alt="hero image" />
         </div>
 
         <div className="about-page d-center">
@@ -86,7 +86,7 @@ function Contact() {
               <>
                 <div className="contact-icon d-flex">
                   <div className="icon">
-                    <img src={icon} alt="" />
+                    <img src={icon} alt="phone icon" />
                   </div>
                   <h4>{aboutContact}</h4>
                 </div>
@@ -212,7 +212,7 @@ function Contact() {
 
       <div className="location">
         <ElementAnimation
-          element={ <img src={location} alt="" />}
+          element={ <img src={location} alt="location icon" />}
           delay={.2}
         />
        

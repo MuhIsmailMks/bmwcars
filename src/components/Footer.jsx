@@ -122,7 +122,7 @@ const FooterSection = () => {
        <div className='email-container'> 
 
             <div className="email d-flex">
-                <div className="icon d-center"><img src={email} alt="" /></div>
+                <div className="icon d-center"><img src={email} alt="email icon" /></div>
                  <input type="text" placeholder='Your Email' />
             </div>
 

@@ -10,7 +10,7 @@ import {ElementAnimation, AnimatedTextCharacter,TextOpacityAnimation ,LinesAnima
 
 // IMAGE
 // header
-import bgHeader from '../../images/bgHeader.webp'
+import bgHero from '../../images/bgHeader.webp'
 import tabHeaderImage from '../../images/TabHeaderImage.webp' 
 import dekstopHeaderImage from '../../images/dekstopHeaderImage.webp' 
 import mobileHeaderImage from '../../images/mobileHeaderImage.webp'  
@@ -103,15 +103,14 @@ function Home() {
   return (
     <div className='container_home'> 
 
-      <div className='main-car'>
+      <section className='main-car'>
         <div className="bgmain-car" >
-          <img src={bgHeader} alt="bgHeader" />
+          <img src={bgHero} alt="bgHero" />
         </div> 
  
         <div className="bgImg">   
           <img src={imageUrl} alt="imageUrl" /> 
         </div>
-
 
         <div className="main-car-content d-flex">
 
@@ -163,12 +162,14 @@ function Home() {
 
 
         </div>
-      </div>
+
+      </section>
  
-      <div className="about-car d-flex scroll-section" id='section1'>
+      <section className="about-car d-flex scroll-section" id='section1'>
 
         <div className="about-car_content"  >
-        <section>
+   
+        <div>
       
               <div className="about-car_title d-flex">
                 <LinesAnimation  /> 
@@ -178,7 +179,8 @@ function Home() {
               <div className="about-car_text">
                 <TextOpacityAnimation startPositionX={-20} endPositionX={0} text={"The BMW M8 Competition is the pinnacle of performance and luxury, representing the epitome of BMW's engineering prowess. This high-performance sports car combines breathtaking power, precision handling, and refined elegance to deliver an extraordinary driving experience."}/>
               </div>
-        </section>
+
+        </div>
 
           <div className="about-car_btn">
 
@@ -196,9 +198,9 @@ function Home() {
 
         </div>
 
-      </div>
+      </section>
 
-      <div className="specification scroll-section" id='section2'>
+      <section className="specification scroll-section" id='section2'>
 
         <div className="specification_title d-center"> 
              <h2>
@@ -208,13 +210,13 @@ function Home() {
             </h2>
         </div>
 
-        <div className="specification_cars-container d-flex"> 
+        <article className="specification_cars-container d-flex"> 
           <SpecificationCar /> 
-        </div>
+        </article>
 
-      </div>
+      </section>
 
-      <div className="images">
+      <section className="images">
         <div className="images-title">
 
                 <h2>
@@ -227,10 +229,9 @@ function Home() {
         <div className="images-content d-flex">
            <ImagesSlider/>
         </div>
-      </div>
+      </section>
 
-
-      <div className='overview '>
+      <section className='overview '>
 
         <section className='overview-car'>
           
@@ -244,7 +245,7 @@ function Home() {
         <div className='about_car-parts'> 
 
           <div className="line d-flex _1">
-            <div className="col-container _1 d-flex">
+            <article className="col-container _1 d-flex">
 
               <ElementAnimation element={ <>
                   <img src={engine} alt="engine" />
@@ -280,7 +281,7 @@ function Home() {
               classContainer={'col bodyDesign'}/>
  
 
-            </div>
+            </article>
 
             <div className="col-container _2"> 
 
@@ -411,7 +412,7 @@ function Home() {
                      <h2 className="start-price d-flex">
                       <LinesAnimation /> 
                       <ElementAnimation delay={1.5} element={(
-                        true === true ?   <img src={dollar} alt="" /> :<img src={dollarDark} alt="" /> 
+                        true === true ?   <img src={dollar} alt="dollar icon" /> :<img src={dollarDark} alt="dollar icon" /> 
                         )}
                         />
                        <AnimatedTextCharacter text={'Starting Price'} delay={1.9}/>
@@ -456,8 +457,7 @@ function Home() {
 
         </div>
 
-      </div>
-
+      </section>
 
     </div>
   )
