@@ -82,7 +82,7 @@ body .lines:not(.main-car .lines) {
   align-items: center;
 }
 
-/*loading */
+/* loading */
 .loading {
   display: flex;
   justify-content: center;
@@ -126,7 +126,7 @@ body .lines:not(.main-car .lines) {
 nav {
   height: 78px;
   width: 100%;
-  max-width: 1700px;
+  max-width: 2000px;
   position: absolute;
   margin: 0 auto;
 
@@ -134,10 +134,10 @@ nav {
   z-index: 999;
 
   justify-content: space-between;
-  top: 0;
+  top: 10px;
   left: 50%;
 
-  padding: 0 30px;
+  padding: 0 30px; 
 }
 
 /* logoWeb */
@@ -152,6 +152,7 @@ nav .logo img {
   width: auto;
   object-fit: contain;
 }
+
 /* link container */
 nav ul {
   display: flex;
@@ -187,11 +188,11 @@ nav li .active::before {
 }
 
 /* mode */
-.mode {
+.mode{
   height: 100%;
   width: 70px;
   position: absolute;
-  right: 120px;
+  right: 2%;
   user-select: none;
 }
 
@@ -218,8 +219,6 @@ nav .menu {
   position: relative;
   background-color: white;
 }
-
-
 
 
 /* footer */
@@ -453,13 +452,6 @@ body.dark p:not(.advantages p){
   color: var(--dark-mode-text);
 }
 
-
-
-
-
-
-
-
 /* responsive */
 @media screen and (max-width: 1700px) {
   nav {
@@ -470,6 +462,10 @@ body.dark p:not(.advantages p){
 @media screen and (max-width: 1400px) {
   nav {
     padding: 0 5rem;
+  }
+
+  .mode{  
+    right: 5%; 
   }
 
   /* footer */
@@ -575,11 +571,9 @@ body.dark p:not(.advantages p){
     flex-direction: column;
 
     top: -25px;
-
     right: 0;
 
-    background-color: #0a0a0a;
-    /* transform: translateX(100%); */
+    background-color: #0a0a0a; 
 
     width: 0%;
     opacity: 0;
@@ -602,8 +596,7 @@ body.dark p:not(.advantages p){
   }
 
   body:has(#menu-active) nav ul {
-    transition: all 0.5s;
-    /* transform: translateX(0%); */
+    transition: all 0.5s; 
     width: 60%;
     opacity: 1;
   }

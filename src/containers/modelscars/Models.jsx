@@ -68,11 +68,7 @@ function Models() {
             </button>
           }
           />
-          
-          {/* <button className="view-btn d-center">
-              <span></span>
-              <p>View More</p>
-            </button> */}
+           
 
           <div className="support-by d-flex">
             <ElementAnimation

@@ -19,8 +19,7 @@ import FooterSection from "./components/Footer";
 
 // image
 import logo from './images/logoWeb.png'
-import darkMode from "./icons/darkmode.png"
-import email from './icons/emailIcon.svg'
+import darkMode from "./icons/darkmode.png" 
 
 // navbar
 export const DarkMode = () => {
@@ -144,51 +143,7 @@ const HeaderNavigation = () => {
 const App = () => {
   return (
     <div className="container">
-      <Router>
-        {/* <nav>
-          <ul>
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? "active link" : "link"
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive ? "active link" : "link"
-                }
-              >
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/models"
-                className={({ isActive }) =>
-                  isActive ? "active link" : "link"
-                }
-              >
-                Models
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive ? "active link" : "link"
-                }
-              >
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-        </nav> */}
+      <Router> 
         <HeaderNavigation/>
 
         <Routes>
