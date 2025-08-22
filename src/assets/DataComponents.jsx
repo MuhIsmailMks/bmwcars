@@ -358,7 +358,7 @@ export const ModelheroImage = [
         seriesCar:'750Li',
         imageCar:the750li,
         speed: '310 KM/h',
-        type: 'series',
+        type: 'Sedan',
         fuel: 'Gasoline',
         year: '2022',
     },

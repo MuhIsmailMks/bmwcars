@@ -42,7 +42,6 @@ function Models() {
         <div className="content-hero">
           <span className="bg"></span>
 
-
           <h2 className="content-hero-title">    <AnimatedTextCharacter text={'Models'} delay={.9}/></h2>
 
           <TextOpacityAnimation
@@ -62,8 +61,7 @@ function Models() {
           delay={1}
           startPositionX={-70}
           element={
-            <button className="view-btn d-center">
-              <span></span>
+            <button className="view-btn d-center"> 
               <p>View More</p>
             </button>
           }
