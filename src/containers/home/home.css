@@ -41,24 +41,6 @@ body.dark .gradient_hero-car{
     box-sizing: border-box;
     overflow: hidden; 
 }
-
-/* bg hero-car */
-.hero-car .bghero-car{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
-    max-width: 100vw;
-    left: 0;
-    top: 0;
-    z-index: 0; 
-}
-
-.bghero-car img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
  
  
 /* img hero-car */
@@ -68,7 +50,7 @@ body.dark .gradient_hero-car{
  
     z-index: 0;
     width: 100%;
-    max-width: 1800px;
+    max-width: 2300px;
     user-select: none;
 }
 
@@ -492,10 +474,6 @@ body.dark .gradient_hero-car{
 } 
 
 
-
-
-
-
 /* IMAGES */
 .images{
     position: relative;
@@ -782,39 +760,39 @@ body.dark .gradient_hero-car{
     justify-content: space-between; 
 }
 
-.about_car-parts .col-container{
+.about_car-parts .column-container{
     position: relative;
     height: 414px;
     margin-bottom: 1rem;  
 }
 
-.col-container._1{
+.column-container._1{
     width: 799px; 
  
     gap: 1rem;
     flex-wrap: wrap; 
 }
 
-.col-container._1 .engine{
+.column-container._1 .engine{
     width: 373px;
     height: 200px;  
 }
 
-.col-container._1 .wheels{
+.column-container._1 .wheels{
     height: 200px;
     width: 405px;  
 }
 
-.col-container._1 .bodyDesign{
+.column-container._1 .bodyDesign{
     width: 100%;
     height: 199px; 
 } 
 
-.col-container._2{
+.column-container._2{
     width:485px;    
 }
 
-.col-container._2 .col{
+.column-container._2 .col{
     width: 100%;
     height: 100%; 
 }
@@ -1239,20 +1217,20 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 @media screen and (max-width:1550px){
     /* overview */
     /* line1 */
-    .col-container._1{
+    .column-container._1{
         width: 62%;  
         justify-content: space-between;
     }
     
-    .col-container._1 .engine,
-    .col-container._1 .wheels{
+    .column-container._1 .engine,
+    .column-container._1 .wheels{
         width: 48.9%;
     }
-    .col-container._1 .bodyDesign{
+    .column-container._1 .bodyDesign{
         width: 100%;
     }
     
-    .col-container._2{
+    .column-container._2{
         width: 37%; 
     }
     /* line2 */
@@ -1313,12 +1291,12 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         padding: 0 5rem;
     }
 
-    .col-container._1 .engine,
-    .col-container._1 .wheels{
+    .column-container._1 .engine,
+    .column-container._1 .wheels{
         width: 48.7%; 
 
     }
-    .col-container._1 .bodyDesign{
+    .column-container._1 .bodyDesign{
         width: 100%; 
     } 
 
@@ -1453,12 +1431,12 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     .content-col h2{ 
         font-size: 1.3rem;
     }
-    .about_car-parts .col-container{ 
+    .about_car-parts .column-container{ 
         height: 384px;  
     }
-    .col-container._1 .engine,
-    .col-container._1 .wheels,
-    .col-container._1 .bodyDesign{ 
+    .column-container._1 .engine,
+    .column-container._1 .wheels,
+    .column-container._1 .bodyDesign{ 
         height: 180px; 
     } 
 
@@ -1506,8 +1484,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     }
 
     /* overview */
-    .col-container._1 .engine,
-    .col-container._1 .wheels{
+    .column-container._1 .engine,
+    .column-container._1 .wheels{
         width: 48.5%;  
     }
 
@@ -1680,11 +1658,11 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         flex-direction: column;
     }
 
-    .col-container._1{
+    .column-container._1{
         width: 100%;
     }
 
-    .col-container._2{
+    .column-container._2{
         width:75%;   
         height: 250px; 
     }
@@ -1930,7 +1908,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     }
 
     /* line 1 */
-    .col-container._2{
+    .column-container._2{
         height: 300px;
     }
 
@@ -2169,22 +2147,22 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     .overview-title h2{
         font-size: 2.2rem;
     }
-    .col-container._2{ 
+    .column-container._2{ 
         width: 100%;
     } 
 
-    .about_car-parts .col-container .col,
+    .about_car-parts .column-container .col,
     .about_car-parts .line._2 .col:nth-child(1),
     .about_car-parts .line._2 .col:nth-child(2),
     .about_car-parts .line._2 .col:nth-child(3){
         width: 100%;
     } 
 
-    .about_car-parts .col-container._1{
+    .about_car-parts .column-container._1{
         height: auto; 
     }
 
-    .col-container._2{
+    .column-container._2{
         width: 100%; 
     }   
 
@@ -2415,7 +2393,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         font-size: .79rem;
         padding: 0 1rem;
     } 
-    .col-container._2{ 
+    .column-container._2{ 
         height: 340px;
     } 
 

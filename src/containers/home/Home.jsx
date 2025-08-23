@@ -103,10 +103,7 @@ function Home() {
   return (
     <div className='container_home'> 
 
-      <section className='hero-car'>
-        <div className="bghero-car" >
-          <img src={bgHero} alt="bgHero" />
-        </div> 
+      <section className='hero-car'> 
  
         <div className="bgImg">   
           <img src={imageUrl} alt="imageUrl" /> 
@@ -245,7 +242,7 @@ function Home() {
         <div className='about_car-parts'> 
 
           <div className="line d-flex _1">
-            <article className="col-container _1 d-flex">
+            <article className="column-container _1 d-flex">
 
               <ElementAnimation element={ <>
                   <img src={engine} alt="engine" />
@@ -283,7 +280,7 @@ function Home() {
 
             </article>
 
-            <div className="col-container _2"> 
+            <div className="column-container _2"> 
 
             <ElementAnimation element={ <>
                   <img src={key} alt="bodyDesign" />

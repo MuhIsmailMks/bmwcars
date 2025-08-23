@@ -192,9 +192,10 @@
 /* Frequently Asked Questions */
 .faq-container{
   width: 100%;
+  max-width: 2000px;
   height: auto;
   position: relative;  
-  margin: 3rem 0  ;
+  margin: 3rem auto  ;
 }
 
 .faq-article-text{
@@ -210,7 +211,7 @@
   letter-spacing: 4px;
 }
 
-.faq-container main{ 
+.faq-container article{ 
   position: relative;
 
   padding: 0 3rem;
@@ -224,7 +225,7 @@
 
 
 /* faq */
-.faq-container main .words-faq-container{
+.faq-container article .words-faq-container{
   width: auto;
   height: auto;
   position: relative;
@@ -413,8 +414,10 @@
 /* location */
 .contact-container .location{
   width: 100%;
+  max-width: 2000px;
   height: auto; 
   position: relative;
+  margin: 0 auto;
 }
 
 .location img{
@@ -560,7 +563,7 @@ body.dark .question-form form input::placeholder{
     font-size: 1.8rem;
   }
 
-  .faq-container main{
+  .faq-container article{
     flex-direction: column;
   }
 
@@ -656,11 +659,7 @@ body.dark .question-form form input::placeholder{
     font-size: .8rem;
   }
 
-    /* question form */
-    .question-form{
-      margin-top: 5rem ;
-    }
-
+    /* question form */ 
     .question-form h4{
       font-size: 3vw;
     }

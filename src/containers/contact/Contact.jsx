@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
- 
 import {
   AnimatedTextCharacter, 
   CostumLinesAnimation,
@@ -112,7 +111,7 @@ function Contact() {
             }
         />
 
-        <main>
+        <article>
           <div className="words-faq-container d-flex">
             {frequentlyAsked.map((ask, i) => (
               <ElementAnimation
@@ -175,7 +174,7 @@ function Contact() {
 
             </section>
           </div>
-        </main>
+        </article>
       </div>
 
       <div className="question-form">
