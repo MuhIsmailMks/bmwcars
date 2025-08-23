@@ -17,7 +17,7 @@
     overflow-x: hidden;
 }  
 
-body.dark .gradient_main-car{ 
+body.dark .gradient_hero-car{ 
     background: linear-gradient(0deg, var(--dark-mode-bg) 74.38%, var(--dark-mode-bg) 8.28%, rgba(241, 241, 241, 0.00) 100%); 
 }
 
@@ -26,15 +26,14 @@ body.dark .gradient_main-car{
 .images-title h2,
 .express_colors h2,
 .start-price,
-.overview-title h2{
-    /* padding-left: 4rem; */
+.overview-title h2{ 
     display: flex;
     align-items: center;
     width: auto;
 }
  
-/* main-car */ 
-.container_home .main-car{
+/* hero-car */ 
+.container_home .hero-car{
     height: 900px;
     width: 100%;
     position: relative;   
@@ -43,8 +42,8 @@ body.dark .gradient_main-car{
     overflow: hidden; 
 }
 
-/* bg main-car */
-.main-car .bgmain-car{
+/* bg hero-car */
+.hero-car .bghero-car{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -55,15 +54,15 @@ body.dark .gradient_main-car{
     z-index: 0; 
 }
 
-.bgmain-car img{
+.bghero-car img{
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
  
  
-/* img main-car */
-.main-car .bgImg{
+/* img hero-car */
+.hero-car .bgImg{
     position: absolute;
     height: auto;
  
@@ -79,8 +78,8 @@ body.dark .gradient_main-car{
     object-fit: contain;
 }
 
-/* main-car content */
-.main-car-content{
+/* hero-car content */
+.hero-car-content{
     position: relative;
     height: 80%;
     width: 87%;
@@ -93,7 +92,7 @@ body.dark .gradient_main-car{
     justify-content: space-between;
 }
 
-.about_car-main-car{
+.about_car-hero-car{
     width: 400px;
     height: 300px; 
     position: relative;
@@ -101,7 +100,7 @@ body.dark .gradient_main-car{
     font-family: var(--font-prompt);
 }
 
-.about_car-main-car h2{
+.about_car-hero-car h2{
     color: #D9D9D9;
     font-size: 3.75rem; 
     font-style: italic; 
@@ -111,7 +110,7 @@ body.dark .gradient_main-car{
 
 }
 
-.about_car-main-car .lines{
+.about_car-hero-car .lines{
     width: 310px;
     height: 9px; 
     gap: 0;
@@ -128,7 +127,7 @@ body.dark .gradient_main-car{
     margin-left: -15px;
 }
 
-.about_car-main-car p{
+.about_car-hero-car p{
     color: #C1C1C1;
     width: 360px;
     font-size: 1.0625rem;
@@ -435,8 +434,7 @@ body.dark .gradient_main-car{
 
 
 .specification_cars-container  .specification_content:nth-child(1) .icon::before{
-    background-image: url('../../icons/engineIcon.svg'); 
-    /* background-image: var(--Image);  */
+    background-image: url('../../icons/engineIcon.svg');  
     height: 27px;   
 }
 .specification_cars-container  .specification_content:nth-child(2) .icon::before{
@@ -458,6 +456,7 @@ body.dark .gradient_main-car{
 .specification_cars-container  .specification_content:nth-child(5) .icon::before{ 
     height: 34px; 
 }
+
 /* icon hover */
 .specification_cars-container  .specification_content:hover:nth-child(1) .icon::before{
     background-image: url(../../icons/engineIconActive.svg);  
@@ -615,7 +614,7 @@ body.dark .gradient_main-car{
     transform: translate(-50%, -50%); 
 }
 
-#main-image .swiper-slide.swiper-slide-active{
+#hero-image .swiper-slide.swiper-slide-active{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1204,12 +1203,12 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 
 /* responsive */
 @media screen and (min-width:1800px) {
-    /* main-car */
-   .container_home  .main-car{
+    /* hero-car */
+   .container_home  .hero-car{
         height: 830px;
     }
  
-    .main-car .bgImg{
+    .hero-car .bgImg{
         transform: translate(-50%);
         left: 50%;
     } 
@@ -1221,18 +1220,18 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1800px) {
-    /* main-car */
-    .main-car .bgmain-car{
+    /* hero-car */
+    .hero-car .bghero-car{
         display: none;
     }
 
-    .about_car-main-car{
+    .about_car-hero-car{
         margin-left: 1.5rem;
     } 
 }
 
 @media screen and (min-width:1650px) { 
-    .about_car-main-car{
+    .about_car-hero-car{
         margin-top: 4rem;
     }
 }
@@ -1269,20 +1268,20 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (min-width:1450px) and (max-width:1650px) {
-    /* main-car */
-    .container_home  .main-car{
+    /* hero-car */
+    .container_home  .hero-car{
         height: 678px;
         overflow: hidden;
 
         margin-bottom: 10.313rem;
     }
 
-    .gradient_main-car{
+    .gradient_hero-car{
         bottom: -90px;
         height: 310px;
     }
 
-    .about_car-main-car{ 
+    .about_car-hero-car{ 
         padding-top: 3rem;
     }
 
@@ -1294,17 +1293,17 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 } 
 
 @media screen and (max-width:1456px){
-    /* main-car */ 
-    .about_car-main-car h2{ 
+    /* hero-car */ 
+    .about_car-hero-car h2{ 
         font-size: 3rem; 
     }
     
-    .about_car-main-car{
+    .about_car-hero-car{
         margin-top: 2rem;
         margin-left: 0rem;
     }
 
-    .about_car-main-car p{
+    .about_car-hero-car p{
         width: 310px;
         font-size: .9rem;
     }
@@ -1336,8 +1335,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1400px){
-    /* main-car */
-    .container_home .main-car{
+    /* hero-car */
+    .container_home .hero-car{
         height: 600px;
         overflow: hidden;
         margin-bottom: 9rem;
@@ -1482,8 +1481,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1200px){
-    /* main-car */
-    .container_home .main-car{ 
+    /* hero-car */
+    .container_home .hero-car{ 
         height: 750px;
         margin-bottom: 2rem;
     }
@@ -1542,8 +1541,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1100px){
-    /* main-car */
-    .container_home  .main-car{
+    /* hero-car */
+    .container_home  .hero-car{
         height: 700px;
     } 
 
@@ -1714,8 +1713,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:1000px){ 
-    /* main-car */
-    .container_home .main-car{ 
+    /* hero-car */
+    .container_home .hero-car{ 
         height:70vmax;
         max-height: 670px;
     } 
@@ -1784,24 +1783,24 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:900px){ 
-    /* main-car */
-    .container_home .main-car{
+    /* hero-car */
+    .container_home .hero-car{
         height: 60vw;
     }
 
-    .main-car-content{
+    .hero-car-content{
         padding-top: 3rem;
     }
 
-    .about_car-main-car h2{
+    .about_car-hero-car h2{
         font-size: 2.5em;
     }
 
-    .about_car-main-car p{
+    .about_car-hero-car p{
         font-size: .8rem;
     }
 
-    .main-car-content .line{
+    .hero-car-content .line{
         height: 7px;
     }
 
@@ -2029,8 +2028,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:800px){
-    /* main-car */
-    .main-car{
+    /* hero-car */
+    .hero-car{
         height: 500px;
     }
  
@@ -2220,20 +2219,20 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:640px){
-    /* main-car */
-    .main-car{
+    /* hero-car */
+    .hero-car{
         height: 490px;
     }
 
-    /* main-car content */
-    .about_car-main-car{ 
+    /* hero-car content */
+    .about_car-hero-car{ 
         width: auto;
     }
-    .about_car-main-car h2{
+    .about_car-hero-car h2{
         font-size: 2rem;
     }
 
-    .about_car-main-car p{
+    .about_car-hero-car p{
         width: 330px;
         font-size: .75rem; 
     }
@@ -2259,7 +2258,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         height: 14px; 
     }
 
-    .about_car-main-car .lines{
+    .about_car-hero-car .lines{
         width: 260px;
         height: 3px;
     } 
@@ -2321,18 +2320,18 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 
 
 @media screen and (max-width:580px){
-    /* main-car */
-    main-car{
+    /* hero-car */
+    hero-car{
         height: 430px;
     }
-    .main-car-content{ 
+    .hero-car-content{ 
         padding-top: 1.5rem;
     }
-    .about_car-main-car .lines{
+    .about_car-hero-car .lines{
         width: 200px; 
     }  
 
-    .about_car-main-car p{
+    .about_car-hero-car p{
         width: 280px;
         font-size: 10px;
     }
@@ -2431,11 +2430,8 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 @media screen and (max-width:500px){
-    .main-car{
-        height: 330px; 
-    }
+  
     /* about */
-    
     .about-car_text p{
         font-size: .95rem;
     }
@@ -2452,6 +2448,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     .about-car_text p{
         font-size: .8rem;
     }
+
     /* specification */
 
     .specification_content{
@@ -2497,7 +2494,7 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         margin: .4rem auto;
     }
 
-          /* icon spec */ 
+    /* icon spec */ 
     .specification_cars-container  .specification_content:nth-child(1) .icon::before{
         height: 15px;
     }
@@ -2581,37 +2578,28 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
 }
 
 
-@media screen and (max-width:430px){ 
-    .container_home .main-car{
-        height: auto;
-        margin-bottom: 1rem;
-    }
-
-    /* about car */
-    .about-car_images {
-        width: 100%;
-        height: 250px;
-    }
-}
-
-@media screen and (max-width:400px){
-    /* main-car */
-    .container_home  .main-car{
-        min-height: 300px;
-        height: 390px; 
+@media screen and (max-width:490px){ 
+    /* hero-car */
+    .container_home  .hero-car{
+        min-height: 300px; 
+        height: 100vw; 
 
         margin: 0;
     }
 
-    .about_car-main-car{
+    .hero-car .bgImg{
+        height: 0px;
+    }
+
+    .about_car-hero-car{
         max-width: 100%; 
     }
 
-    .about_car-main-car p{
+    .about_car-hero-car p{
         max-width: 90%;
     }
 
-    .main-car-content{
+    .hero-car-content{
         width: 100%;
         height:200px; 
          
@@ -2620,11 +2608,11 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         padding: 1.5rem 0;
     }
 
-    .about_car-main-car{
+    .about_car-hero-car{
         height: 100px;
     }
 
-    .about_car-main-car .lines{  
+    .about_car-hero-car .lines{  
         width: 90%;
         height: 3px;   
 
@@ -2633,12 +2621,12 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         
     }
 
-    .main-car-content .line{
+    .hero-car-content .line{
         height: 100%;
         clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
     }
 
-    .about_car-main-car h2 .container-text-animation{
+    .about_car-hero-car h2 .container-text-animation{
         max-width: 100%; 
          
         margin: 1rem auto;
@@ -2646,12 +2634,12 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         justify-content: center;
     } 
 
-    .about_car-main-car h2{ 
+    .about_car-hero-car h2{ 
         font-size: 1.85rem;  
         position: relative;
     }
 
-    .about_car-main-car p{ 
+    .about_car-hero-car p{ 
         font-size: 0.625rem; 
         width: 277px;
         max-width: 90%;
@@ -2670,11 +2658,10 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
         margin-top: 1.5rem;
     }
 
-
-
-    /* about car */
+ 
+     /* about car */
     .container_home .about-car{ 
-        margin:  3.813rem 0 0 0; 
+        margin:  2rem 0 0 0; 
     }
     
     .about-car_content{
@@ -2858,16 +2845,9 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     }
  
 }
+ 
 
 @media screen and (max-width:370px) { 
-      /* specification */   
-     .specification .specification_content{
-        width: 47%;
-        min-width: 0px;  
-    }
-}
-
-@media screen and (max-width:300px) {
     .main-image_container img{
         max-width: 90%;
         height: auto;
@@ -2884,4 +2864,11 @@ body.dark .specification_cars-container  .specification_content:hover:nth-child(
     .about-car_images img{
         height: 120px;
     }
+
+      /* specification */   
+     .specification .specification_content{
+        width: 47%;
+        min-width: 0px;  
+    }
 }
+ 

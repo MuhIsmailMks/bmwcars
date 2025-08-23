@@ -76,7 +76,7 @@ function Home() {
         return  dekstopHeaderImage
         } else if(dimensions.width >= 800){
         return tabHeaderImage
-        } else if(dimensions.width >= 430){
+        } else if(dimensions.width >= 500){
           return mobileHeaderImage
         } else {
           return smallMobileHeaderImage
@@ -103,8 +103,8 @@ function Home() {
   return (
     <div className='container_home'> 
 
-      <section className='main-car'>
-        <div className="bgmain-car" >
+      <section className='hero-car'>
+        <div className="bghero-car" >
           <img src={bgHero} alt="bgHero" />
         </div> 
  
@@ -112,9 +112,9 @@ function Home() {
           <img src={imageUrl} alt="imageUrl" /> 
         </div>
 
-        <div className="main-car-content d-flex">
+        <div className="hero-car-content d-flex">
 
-            <div className="about_car-main-car">
+            <div className="about_car-hero-car">
               <section>  
                 <h2 className='type_car'>
                     <AnimatedTextCharacter text={'The M8'} delay={.9}/>
